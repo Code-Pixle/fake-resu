@@ -1,0 +1,65 @@
+{
+  "downloaded": [
+    {
+      "source": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-04-498bb3f3.avif",
+      "bytes": 35388
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-03-423a509c.avif",
+      "bytes": 44524
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-02-8d6ab58f.avif",
+      "bytes": 67694
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-06-fdf99edd.avif",
+      "bytes": 41285
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-07-b0bb8777.avif",
+      "bytes": 85596
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85",
+      "local": "images/fashion-store-05-08addc06.avif",
+      "bytes": 145460
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-10-165ef583.avif",
+      "bytes": 26570
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-11-7bbf1ac8.avif",
+      "bytes": 34656
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-08-a50bca66.avif",
+      "bytes": 61618
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-09-2b5e4cf5.avif",
+      "bytes": 150048
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85",
+      "local": "images/fashion-store-12-cf6d2f53.avif",
+      "bytes": 23282
+    }
+  ],
+  "failed": [
+    {
+      "source": "https://images.unsplash.com/photo-1624222247344-550fb8f25e86?auto=format&fit=crop&w=900&q=85",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

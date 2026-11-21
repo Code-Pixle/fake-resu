@@ -1,0 +1,61 @@
+<!doctype html><html lang=fa dir=rtl><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>نئون‌تک | لوازم دیجیتال</title>
+  <link rel="stylesheet" href="../../fonts/local-fonts.css">
+<style>
+:root{--bg:#070a1c;--gl:#ffffff12;--bd:#ffffff22;--c1:#00e5ff;--c2:#7c4dff;--c3:#ff3d9a}
+*{box-sizing:border-box;margin:0}body{font-family:Vazirmatn,sans-serif;background:var(--bg);color:#e8ecff;min-height:100vh;position:relative;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:55vw;height:55vw;border-radius:50%;filter:blur(110px);opacity:.35;z-index:-1;animation:fl 18s ease-in-out infinite alternate}body:before{background:var(--c2);top:-15vw;right:-10vw}body:after{background:var(--c1);bottom:-20vw;left:-10vw;animation-delay:-8s}@keyframes fl{to{transform:translate(8vw,6vw) scale(1.15)}}
+button,input,select{font:inherit}button{cursor:pointer;border:0}
+header{position:sticky;top:12px;z-index:20;margin:12px 4vw;display:flex;gap:12px;align-items:center;padding:12px 18px;background:var(--gl);border:1px solid var(--bd);border-radius:22px;backdrop-filter:blur(18px)}
+.logo{font-size:24px;font-weight:900}.logo span{background:linear-gradient(90deg,var(--c1),var(--c3));-webkit-background-clip:text;color:transparent}
+input,select{background:#ffffff10;border:1px solid var(--bd);color:#fff;padding:10px 14px;border-radius:14px;outline:0}input:focus{border-color:var(--c1)}header input{flex:1}option{color:#000}
+.btn{background:linear-gradient(90deg,var(--c1),var(--c2));color:#00121a;font-weight:800;padding:10px 20px;border-radius:14px;transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px #00e5ff55}
+.ic{background:var(--gl);color:#fff;border:1px solid var(--bd);padding:9px 14px;border-radius:14px;position:relative}.ic b{background:var(--c3);border-radius:10px;padding:0 7px;font-size:12px;margin-right:5px}
+.hero{margin:20px 4vw;padding:6vh 5vw;border-radius:34px;background:linear-gradient(120deg,#7c4dff44,#00e5ff22,#ff3d9a33);border:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.hero h1{font-size:clamp(34px,6vw,76px);font-weight:900;line-height:1.1}.hero h1 span{background:linear-gradient(90deg,var(--c1),var(--c3));-webkit-background-clip:text;color:transparent}.hero p{opacity:.7;margin-top:12px}
+.badge{display:inline-block;background:#00e5ff22;border:1px solid var(--c1);color:var(--c1);padding:4px 14px;border-radius:30px;font-size:13px;margin-bottom:14px}
+.wrap{display:grid;grid-template-columns:230px 1fr;gap:20px;padding:10px 4vw 40px}
+aside.f{position:sticky;top:90px;align-self:start;background:var(--gl);border:1px solid var(--bd);border-radius:24px;padding:18px;display:grid;gap:14px;backdrop-filter:blur(14px)}
+.cl{display:flex;flex-wrap:wrap;gap:6px}.chip{background:var(--gl);border:1px solid var(--bd);color:#fff;padding:7px 14px;border-radius:30px;font-size:14px}.chip.on{background:linear-gradient(90deg,var(--c1),var(--c2));color:#00121a;font-weight:800;border-color:transparent}
+input[type=range]{accent-color:var(--c1);padding:0;width:100%}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:var(--gl);border:1px solid var(--bd);border-radius:26px;padding:14px;display:flex;flex-direction:column;gap:8px;backdrop-filter:blur(14px);transition:.3s;position:relative}.card:hover{transform:translateY(-8px);border-color:var(--c1);box-shadow:0 20px 40px #00e5ff22}
+.ph{position:relative;aspect-ratio:1;border-radius:18px;display:grid;place-items:center;font-size:64px;overflow:hidden}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.ph small{position:absolute;bottom:6px;font-size:10px;opacity:.4;direction:ltr}
+.sp{display:flex;gap:5px;flex-wrap:wrap}.sp span{background:#ffffff14;font-size:11px;padding:2px 9px;border-radius:20px}.pr{font-weight:900;font-size:17px;color:var(--c1)}.br{font-size:12px;opacity:.55}
+.wl{position:absolute;top:20px;left:20px;z-index:2;background:#0008;color:var(--c3);width:34px;height:34px;border-radius:50%;font-size:16px}
+.ov{position:fixed;inset:0;background:#0008;z-index:40;display:none}.ov.show{display:block}
+#drawer{position:fixed;top:0;left:0;height:100%;width:min(430px,100%);background:#0d1230f2;border-right:1px solid var(--c1);z-index:50;transform:translateX(-102%);transition:.35s;padding:22px;display:flex;flex-direction:column;gap:12px;backdrop-filter:blur(20px)}#drawer.open{transform:none}
+#items{flex:1;overflow:auto}.it{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--bd);font-size:14px}.it .ph{width:54px;font-size:26px;flex:none;border-radius:12px}.it div{flex:1}.q button{width:26px;height:26px;border-radius:50%;background:var(--gl);color:#fff}
+.md{position:fixed;inset:0;z-index:60;display:none;place-items:center}.md.show{display:grid}.box{background:#0d1230;border:1px solid var(--c1);border-radius:28px;padding:26px;width:min(460px,94%);max-height:92vh;overflow:auto;display:grid;gap:10px}.box input{width:100%}
+.tot{font-size:20px;font-weight:900}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}aside.f{position:static}}
+</style></head><body>
+<header><div class=logo>نئون<span>تک</span></div><input id=s placeholder="جستجوی گوشی، لپ‌تاپ، ساعت..."><button class=ic id=wb>♥<b id=wn>0</b></button><button class=ic id=cb>🛒<b id=cn>0</b></button></header>
+<section class=hero><div><span class=badge>قیمت‌ها: ۲۰ آبان ۱۴۰۵</span><h1>دنیای <span>دیجیتال</span><br>یک‌جا</h1><p>گوشی، لپ‌تاپ، ساعت هوشمند و هدفون با قیمت روز بازار ایران · ارسال سریع</p></div><div style="font-size:90px">📱💻⌚</div></section>
+<div class=wrap><aside class=f><b>دسته‌بندی</b><div class=cl id=cats></div><b>برند</b><div class=cl id=brs></div><b>سقف قیمت: <span id=pv></span></b><input type=range id=pr min=20 max=600 step=10 value=600><select id=o><option value=0>پیش‌فرض</option><option value=1>ارزان‌ترین</option><option value=2>گران‌ترین</option></select></aside><main id=grid></main></div>
+<div class=ov id=ov></div><aside id=drawer><h3>سبد خرید</h3><div id=items></div><div class=tot id=tot></div><button class=btn onclick=checkout()>ادامه خرید</button></aside><div class=md id=md><div class=box id=bx></div></div>
+<script>
+const P=[["آیفون ۱۷ (۲۵۶ گیگ)","موبایل","اپل",394e6,["۲۵۶GB","CH","نات‌اکتیو"],"📱",210],["آیفون ۱۷ پرو (۲۵۶ گیگ)","موبایل","اپل",575e6,["۲۵۶GB","ZAA","نات‌اکتیو"],"📱",260],["آیفون ۱۷ پرو مکس (۲۵۶ گیگ)","موبایل","اپل",578e6,["۲۵۶GB","ZAA","نات‌اکتیو"],"📱",280],["سامسونگ گلکسی S25 FE","موبایل","سامسونگ",197e6,["۲۵۶GB","FE"],"📱",230],["سامسونگ گلکسی A57","موبایل","سامسونگ",153e6,["۲۵۶GB","سری A"],"📱",190],["سامسونگ گلکسی A56","موبایل","سامسونگ",147e6,["۲۵۶GB","سری A"],"📱",180],["سامسونگ گلکسی A17","موبایل","سامسونگ",95.3e6,["۲۵۶GB","اقتصادی"],"📱",200],["شیائومی ردمی نوت ۱۵ پرو","موبایل","شیائومی",132.2e6,["۲۵۶GB","Pro"],"📱",25],["شیائومی ردمی نوت ۱۴","موبایل","شیائومی",90.5e6,["۲۵۶GB"],"📱",15],["لنوو LOQ 15IRX9","لپ‌تاپ","لنوو",267e6,["i5-13450HX","۱۶GB RAM","RTX 3050"],"💻",320],["ایسوس VivoBook E410KA","لپ‌تاپ","ایسوس",58.9e6,["Celeron N4500","۴GB RAM","۶۴GB"],"💻",160],["ایرپاد ۴ (نسخه ANC)","صوتی","اپل",35.9e6,["ANC","USB-C"],"🎧",300],["ایرپاد پرو ۲ تایپ‌سی","صوتی","اپل",45.5e6,["ANC","USB-C"],"🎧",270],["اپل واچ سری ۱۱ (۴۵mm)","ساعت هوشمند","اپل",87.5e6,["۴۵mm","سری ۱۱"],"⌚",150],["اپل واچ SE 3 (۴۴mm)","ساعت هوشمند","اپل",66e6,["۴۴mm","SE"],"⌚",170]].map((a,i)=>({id:i,n:a[0],c:a[1],b:a[2],p:a[3],sp:a[4],e:a[5],h:a[6],img:['images/digital-store-01-b8390eec.avif','images/digital-store-02-f188eea4.avif','images/digital-store-03-2a6fa057.avif','images/digital-store-04-b38f44fc.avif','images/digital-store-04-b38f44fc.avif','images/digital-store-04-b38f44fc.avif','images/digital-store-04-b38f44fc.avif','images/digital-store-04-b38f44fc.avif','images/digital-store-04-b38f44fc.avif','images/digital-store-05-76b97cad.avif','images/digital-store-06-b05cdd0f.avif','images/digital-store-07-c8460ab4.avif','images/digital-store-08-f7133613.avif','images/digital-store-09-6f57a343.avif','images/digital-store-10-588a9b20.avif'][i]}));
+const $=s=>document.querySelector(s),J=k=>JSON.parse(localStorage[k]||'[]'),f=n=>Math.round(n/10).toLocaleString('fa-IR')+' میلیون تومان';
+const F=n=>(n/1e6).toLocaleString('fa-IR',{maximumFractionDigits:1})+' میلیون تومان';
+let cat='همه',br='همه',cart=J('dc'),wl=J('dw'),onlyW=false;
+const ph=p=>`<div class=ph style="background:linear-gradient(145deg,hsl(${p.h} 80% 30%),hsl(${p.h+60} 80% 16%))">${p.e}<img src="${p.img}" onerror="this.remove()"><small>${p.img}</small></div>`;
+function draw(){const cs=['همه',...new Set(P.map(p=>p.c))],bs=['همه',...new Set(P.map(p=>p.b))];
+$('#cats').innerHTML=cs.map(c=>`<button class="chip ${c==cat?'on':''}" onclick="cat='${c}';draw()">${c}</button>`).join('');
+$('#brs').innerHTML=bs.map(c=>`<button class="chip ${c==br?'on':''}" onclick="br='${c}';draw()">${c}</button>`).join('');
+$('#pv').textContent=F($('#pr').value*1e6);
+let l=P.filter(p=>(cat=='همه'||p.c==cat)&&(br=='همه'||p.b==br)&&p.p<=$('#pr').value*1e6&&p.n.includes($('#s').value)&&(!onlyW||wl.includes(p.id)));const o=$('#o').value;if(o>0)l.sort((a,b)=>o==1?a.p-b.p:b.p-a.p);
+$('#grid').innerHTML=l.map(p=>`<div class=card><button class=wl onclick="tw(${p.id})">${wl.includes(p.id)?'♥':'♡'}</button>${ph(p)}<span class=br>${p.b} · ${p.c}</span><b>${p.n}</b><div class=sp>${p.sp.map(s=>`<span>${s}</span>`).join('')}</div><div class=pr>${F(p.p)}</div><button class=btn onclick="add(${p.id})">افزودن به سبد</button></div>`).join('')||'<p>محصولی یافت نشد</p>';
+$('#wn').textContent=wl.length.toLocaleString('fa-IR');$('#cn').textContent=cart.reduce((a,b)=>a+b.q,0).toLocaleString('fa-IR');
+$('#items').innerHTML=cart.map((x,i)=>`<div class=it>${ph(P[x.id])}<div><b>${P[x.id].n}</b><br>${F(P[x.id].p)}</div><span class=q><button onclick="q(${i},1)">+</button> ${x.q.toLocaleString('fa-IR')} <button onclick="q(${i},-1)">−</button></span></div>`).join('')||'<p style="opacity:.6;padding:30px 0">سبد خالی است</p>';
+$('#tot').textContent='مجموع: '+F(T())}
+const T=()=>cart.reduce((a,b)=>a+P[b.id].p*b.q,0),sv=()=>{localStorage.dc=JSON.stringify(cart);localStorage.dw=JSON.stringify(wl);draw()};
+function tw(id){wl=wl.includes(id)?wl.filter(x=>x!=id):[...wl,id];sv()}
+function add(id){const e=cart.find(x=>x.id==id);e?e.q++:cart.push({id,q:1});sv();dr(1)}
+function q(i,d){cart[i].q+=d;if(cart[i].q<1)cart.splice(i,1);sv()}
+function dr(o){$('#drawer').classList.toggle('open',o);$('#ov').className='ov'+(o?' show':'')}
+function md(h){$('#md').className='md'+(h?' show':'');$('#ov').className='ov'+(h?' show':'');if(h)$('#bx').innerHTML=h}
+$('#cb').onclick=()=>dr(1);$('#ov').onclick=()=>{dr(0);md()};$('#wb').onclick=()=>{onlyW=!onlyW;draw()};
+function checkout(){if(!cart.length)return;dr(0);md(`<h3>اطلاعات ارسال</h3><form onsubmit="pay(event)" style="display:grid;gap:10px"><input required placeholder="نام و نام خانوادگی"><input required placeholder="موبایل" pattern="09[0-9]{9}"><input required placeholder="شهر"><input required placeholder="آدرس کامل"><select><option>پست پیشتاز</option><option>پیک سریع</option></select><div class=tot>قابل پرداخت: ${F(T())}</div><button class=btn>پرداخت (آزمایشی)</button></form>`)}
+function pay(e){e.preventDefault();cart=[];sv();md(`<div style="text-align:center;padding:30px"><div style="font-size:56px">✅</div><h3>سفارش ثبت شد</h3><p>شماره سفارش: <b>NT-${Math.floor(Math.random()*9e5+1e5)}</b></p><button class=btn onclick="md()">بستن</button></div>`)}
+['s','pr','o'].forEach(i=>$('#'+i).oninput=draw);draw();
+</script></body></html>

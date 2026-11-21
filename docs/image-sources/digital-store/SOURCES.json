@@ -1,0 +1,55 @@
+{
+  "downloaded": [
+    {
+      "source": "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-01-f188eea4.avif",
+      "bytes": 63143
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-02-b8390eec.avif",
+      "bytes": 96629
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-03-b38f44fc.avif",
+      "bytes": 103087
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-04-2a6fa057.avif",
+      "bytes": 138506
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-05-76b97cad.avif",
+      "bytes": 19990
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-06-b05cdd0f.avif",
+      "bytes": 21585
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-08-f7133613.avif",
+      "bytes": 10127
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-07-c8460ab4.avif",
+      "bytes": 24240
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-09-588a9b20.avif",
+      "bytes": 29244
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
+      "local": "images/digital-store-10-6f57a343.avif",
+      "bytes": 13400
+    }
+  ],
+  "failed": []
+}

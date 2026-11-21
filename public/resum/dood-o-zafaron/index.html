@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#211b18">
+  <meta name="description" content="منوی رستوران دود و زعفران؛ کباب زغالی، خوراک‌های ایرانی و طعم‌های اصیل." />
+  <title>دود و زعفران | منوی رستوران</title>
+  
+  <link rel="stylesheet" href="../../fonts/local-fonts.css">
+<style>
+    :root{
+      --night:#211b18;--night-2:#30251f;--paper:#f4ecdf;--paper-2:#fffaf2;
+      --ink:#2a211c;--muted:#85766a;--line:#e5d8c7;--saffron:#d7a83f;
+      --tomato:#a94731;--tomato-dark:#873b2b;--green:#66734b;
+      --shadow:0 22px 55px rgba(40,27,18,.13);--radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Vazirmatn",sans-serif;line-height:1.8}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}
+    .wrap{width:min(1200px,calc(100% - 48px));margin:auto}
+    .microbar{height:34px;background:#17120f;color:#cbbca9;font-size:10px;letter-spacing:.4px}
+    .microbar .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .microbar b{color:var(--saffron);font-weight:600}
+    header{position:sticky;top:0;z-index:30;background:rgba(244,236,223,.94);backdrop-filter:blur(15px);border-bottom:1px solid rgba(42,33,28,.08)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:190px}
+    .brand-symbol{width:48px;height:48px;display:grid;place-items:center;background:var(--tomato);color:#fff5e7;border-radius:50% 50% 7px 50%;font-size:25px;font-weight:900;box-shadow:5px 5px 0 var(--saffron);transform:rotate(-5deg)}
+    .brand-title{font-size:20px;font-weight:900;line-height:1.2;letter-spacing:-.6px}
+    .brand-en{display:block;font:700 9px Arial,Tahoma,sans-serif;letter-spacing:3px;color:var(--muted);direction:ltr;margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:30px;color:#66584d;font-size:12px;font-weight:600}
+    .nav-links a{transition:color .2s}.nav-links a:hover{color:var(--tomato)}
+    .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--night);color:#fff8eb;padding:11px 18px;border-radius:4px 18px 4px 18px;font-size:11px;font-weight:700;transition:.2s}
+    .nav-cta:hover{background:var(--tomato);transform:translateY(-2px)}
+    .menu-toggle{display:none;border:0;background:transparent;color:var(--night);font-size:26px;cursor:pointer}
+
+    .hero{background:var(--night);color:#fff7ec;position:relative;overflow:hidden;isolation:isolate}
+    .hero:before{content:"زعفران · زغال · مزه";position:absolute;z-index:-1;left:-45px;bottom:-78px;color:rgba(255,255,255,.035);font-weight:900;font-size:clamp(70px,13vw,180px);white-space:nowrap;letter-spacing:-8px}
+    .hero:after{content:"";position:absolute;z-index:-1;width:430px;height:430px;border:1px solid rgba(215,168,63,.22);border-radius:50%;left:-175px;top:-220px;box-shadow:0 0 0 35px rgba(215,168,63,.035),0 0 0 75px rgba(215,168,63,.025)}
+    .hero-grid{min-height:560px;display:grid;grid-template-columns:.92fr 1.08fr;gap:55px;align-items:center;padding:60px 0 68px}
+    .hero-copy{max-width:540px}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:var(--saffron);font-size:11px;font-weight:700;letter-spacing:.5px}
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--saffron)}
+    h1{font-size:clamp(43px,5.3vw,72px);line-height:1.25;letter-spacing:-2.5px;margin:18px 0 18px;font-weight:900}
+    h1 span{color:var(--saffron);display:block}
+    .hero-text{color:#c8b9a9;font-size:14px;line-height:2.35;max-width:445px;margin:0 0 28px}
+    .hero-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+    .btn-main{background:var(--saffron);color:#211b18;padding:13px 23px;border-radius:3px 17px 3px 17px;font-size:12px;font-weight:900;transition:.2s}
+    .btn-main:hover{background:#f0c965;transform:translateY(-3px)}
+    .hero-note{color:#a99a8b;font-size:10px}
+    .hero-visual{height:420px;position:relative}
+    .hero-photo{position:absolute;inset:0 18px 18px 55px;overflow:hidden;border-radius:5px 100px 5px 5px;border:1px solid rgba(215,168,63,.35);box-shadow:0 25px 60px rgba(0,0,0,.3)}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9)}
+    .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,17,12,.32),transparent 60%)}
+    .hero-label{position:absolute;bottom:0;left:0;background:var(--tomato);color:#fff4e6;padding:14px 20px 13px;border:5px solid var(--night);min-width:190px;transform:rotate(-3deg)}
+    .hero-label small{display:block;font-size:9px;color:#f3cdb9}.hero-label b{font-size:16px}
+    .hero-number{position:absolute;top:17px;right:0;width:90px;height:90px;border:1px solid var(--saffron);border-radius:50%;background:var(--night);display:grid;place-content:center;text-align:center;color:var(--saffron);transform:rotate(8deg)}
+    .hero-number b{font:800 25px Arial,Tahoma,sans-serif}.hero-number span{font-size:9px;color:#e4d3bd}
+
+    .ticker{background:var(--saffron);color:#2c2118;overflow:hidden;white-space:nowrap;border-bottom:6px solid var(--tomato)}
+    .ticker-track{display:flex;justify-content:space-around;align-items:center;gap:34px;padding:9px 0;font-size:11px;font-weight:900;letter-spacing:.5px}
+    .ticker-track span:after{content:"✳";margin-right:34px;color:var(--tomato)}
+
+    .menu-area{padding:86px 0 92px;position:relative}
+    .menu-area:before{content:"";position:absolute;top:0;left:0;width:100%;height:230px;background:linear-gradient(180deg,rgba(255,255,255,.34),transparent);pointer-events:none}
+    .section-top{position:relative;display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:30px}
+    .section-kicker{color:var(--tomato);font-size:10px;font-weight:900;letter-spacing:1.2px}
+    h2{font-size:clamp(30px,3.6vw,45px);line-height:1.35;letter-spacing:-1.4px;margin:5px 0 0;font-weight:900}
+    .section-intro{max-width:350px;color:var(--muted);font-size:11px;line-height:2.2;margin:0}
+    .menu-tools{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:26px;flex-wrap:wrap}
+    .filters{display:flex;gap:8px;overflow-x:auto;max-width:100%;padding:3px 1px 8px;scrollbar-width:none}
+    .filters::-webkit-scrollbar{display:none}
+    .filter-btn{border:1px solid #d9cbb8;color:#756454;background:transparent;padding:9px 17px;border-radius:3px 13px 3px 13px;white-space:nowrap;font-size:11px;font-weight:700;cursor:pointer;transition:.2s}
+    .filter-btn:hover,.filter-btn.active{background:var(--tomato);border-color:var(--tomato);color:white}
+    .search-box{position:relative;min-width:210px;max-width:100%}
+    .search-box input{width:100%;background:rgba(255,250,242,.7);border:1px solid #ded0bd;border-radius:3px 13px 3px 13px;padding:9px 36px 9px 12px;outline:none;color:var(--ink);font-size:11px}
+    .search-box input:focus{border-color:var(--tomato);box-shadow:0 0 0 3px rgba(169,71,49,.09)}
+    .search-box:before{content:"⌕";position:absolute;right:12px;top:0;color:var(--tomato);font-size:23px;line-height:37px}
+    .menu-meta{display:flex;justify-content:space-between;align-items:center;margin:0 1px 16px;color:#8a7b6d;font-size:10px}
+    .menu-meta strong{color:var(--ink);font-size:11px}
+    .menu-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .dish{background:var(--paper-2);border:1px solid #e9dece;overflow:hidden;position:relative;transition:transform .25s,box-shadow .25s;min-width:0;box-shadow:0 5px 15px rgba(52,37,24,.035)}
+    .dish:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .dish-photo{height:190px;position:relative;overflow:hidden;background:#d9cbb8}
+    .dish-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .55s}
+    .dish:hover .dish-photo img{transform:scale(1.06)}
+    .dish-photo:after{content:"";position:absolute;inset:60% 0 0;background:linear-gradient(0deg,rgba(22,16,12,.22),transparent)}
+    .dish-tag{position:absolute;top:12px;right:12px;z-index:1;background:var(--saffron);color:#281d14;font-size:9px;font-weight:900;padding:5px 10px;border-radius:2px 10px 2px 10px}
+    .dish-content{padding:15px 15px 14px}
+    .dish-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+    .dish h3{font-size:14px;line-height:1.7;font-weight:900;margin:0}
+    .dish-index{color:#c8b8a4;font:700 12px Arial,Tahoma,sans-serif;direction:ltr}
+    .dish-desc{min-height:47px;margin:7px 0 13px;color:#897d70;font-size:10px;line-height:2.05}
+    .dish-bottom{border-top:1px dashed #ddcfbc;padding-top:11px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .price{font-size:14px;font-weight:900;color:var(--tomato);white-space:nowrap}
+    .price small{color:#9b8c7d;font-size:9px;font-weight:500;margin-right:3px}
+    .detail-mark{width:27px;height:27px;display:grid;place-items:center;background:#efe3d2;color:var(--tomato);border-radius:50%;font-size:14px}
+    .empty{display:none;grid-column:1/-1;text-align:center;color:var(--muted);padding:45px 12px;background:rgba(255,250,242,.6);border:1px dashed #dacbb7}
+
+    .signature{background:var(--tomato);color:#fff5e9;padding:55px 0;position:relative;overflow:hidden}
+    .signature:after{content:"✳";position:absolute;font-size:310px;line-height:1;left:2%;top:-120px;color:rgba(255,255,255,.07);transform:rotate(15deg)}
+    .signature-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .signature-copy{max-width:610px}
+    .signature-kicker{font-size:10px;color:#f5d3aa;font-weight:700;letter-spacing:1px}
+    .signature h2{font-size:clamp(25px,3.3vw,39px);margin:5px 0 8px;color:white}
+    .signature p{margin:0;color:#f2d8c8;font-size:11px;line-height:2.2}
+    .signature-chip{flex-shrink:0;border:1px solid rgba(255,255,255,.45);padding:17px 22px;text-align:center;transform:rotate(-4deg)}
+    .signature-chip strong{display:block;font-size:26px;color:#ffe2a2}.signature-chip span{font-size:9px;color:#f6d6c4}
+
+    .bottom-menu{background:var(--night);color:#eee1d1;padding:29px 0}
+    .bottom-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .bottom-brand{font-size:16px;font-weight:900}.bottom-brand span{color:var(--saffron)}
+    .bottom-note{font-size:9px;color:#a99a89;max-width:650px;line-height:2.1}
+    .top-link{border:1px solid rgba(255,255,255,.2);padding:8px 13px;color:#e7d6c3;font-size:10px;border-radius:3px 12px 3px 12px}
+
+    @media(max-width:1050px){.menu-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-grid{gap:35px}.hero-visual{height:380px}}
+    @media(max-width:760px){
+      .wrap{width:min(100% - 32px,560px)}.microbar .wrap{justify-content:center}.microbar .wrap span:last-child{display:none}
+      .nav{height:70px}.menu-toggle{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:70px;right:16px;left:16px;background:var(--paper-2);padding:12px 18px;border:1px solid var(--line);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:10px 0;border-bottom:1px solid var(--line)}.nav-links a:last-child{border:0}
+      .hero-grid{display:flex;flex-direction:column;align-items:stretch;padding:46px 0 55px;gap:32px}.hero-copy{max-width:none}.hero-text{font-size:12px}.hero-visual{height:320px}.hero-photo{inset:0 13px 15px 30px;border-radius:5px 75px 5px 5px}.hero-number{width:74px;height:74px;top:9px}.hero-number b{font-size:21px}.hero-label{padding:10px 15px;min-width:165px}.hero-label b{font-size:14px}
+      .ticker-track{justify-content:flex-start;gap:20px;padding:8px 0}.ticker-track span:after{margin-right:20px}.menu-area{padding:60px 0 66px}.section-top{display:block}.section-intro{margin-top:10px}.menu-tools{display:block}.filters{margin-bottom:12px}.search-box{width:100%;max-width:100%}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dish-photo{height:150px}.dish-content{padding:11px}.dish h3{font-size:12px}.dish-desc{font-size:9px;min-height:56px}.price{font-size:12px}.dish-index{font-size:10px}
+      .signature{padding:40px 0}.signature-inner{align-items:flex-start;flex-direction:column}.signature-chip{align-self:flex-start}.bottom-inner{align-items:flex-start;flex-direction:column}.top-link{align-self:flex-end}
+    }
+    @media(max-width:390px){.menu-grid{grid-template-columns:1fr}.dish-photo{height:205px}.dish-desc{min-height:0}.hero h1{font-size:42px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="microbar"><div class="wrap"><span>سفره‌ای برای طعم‌های به‌یادماندنی <b>✦</b></span><span>منوی غذاهای اصیل ایرانی</span></div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="دود و زعفران، صفحه اصلی">
+        <span class="brand-symbol">د</span>
+        <span><span class="brand-title">دود و زعفران</span><span class="brand-en">DOOD & ZAFARAN</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">خانه</a><a href="#menu">منوی غذا</a><a href="#signature">پیشنهاد ویژه</a>
+      </nav>
+      <a class="nav-cta" href="#menu">دیدن منو <span>←</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">آشپزی ایرانی، با عطر زغال و زعفران</div>
+          <h1>طعم اصیل،<span>بی‌تعارف و آتشین.</span></h1>
+          <p class="hero-text">از کبابی که عطرش قبل از رسیدنش خبر می‌دهد تا خورش‌هایی که آرام و باحوصله جا افتاده‌اند؛ اینجا منوی غذاهای ایرانی را با جزئیات و قیمت می‌بینی.</p>
+          <div class="hero-actions"><a class="btn-main" href="#menu">ورق زدن منو <span>↙</span></a><span class="hero-note">غذاهای ایرانی · کباب زغالی · خوراک روز</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo"><img src="images/original.webp" alt="شیشلیک زغالی با برنج زعفرانی" fetchpriority="high"></div>
+          <div class="hero-number"><b>۱۰۰٪</b><span>ایرانی و اصیل</span></div>
+          <div class="hero-label"><small>پیشنهاد امروز</small><b>کباب روی آتش</b></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="wrap ticker-track"><span>کباب تازه</span><span>برنج ایرانی</span><span>خورش جاافتاده</span><span>طعم خاطره‌انگیز</span></div></div>
+
+    <section class="menu-area" id="menu">
+      <div class="wrap">
+        <div class="section-top">
+          <div><div class="section-kicker">THE MENU / منوی رستوران</div><h2>از تنور تا سفره</h2></div>
+          <p class="section-intro">برای هر سلیقه‌ای یک انتخاب هست؛ کباب‌های زغالی، غذاهای سنتی و مزه‌هایی که شروع خوب یک وعده‌اند.</p>
+        </div>
+        <div class="menu-tools">
+          <div class="filters" role="group" aria-label="فیلتر دسته‌بندی غذاها">
+            <button class="filter-btn active" data-filter="all">همه غذاها</button>
+            <button class="filter-btn" data-filter="kebab">کباب‌ها</button>
+            <button class="filter-btn" data-filter="traditional">غذاهای سنتی</button>
+            <button class="filter-btn" data-filter="rice">پلوها</button>
+            <button class="filter-btn" data-filter="starter">پیش‌غذا و مزه</button>
+          </div>
+          <label class="search-box"><input type="search" id="menuSearch" placeholder="اسم غذا رو جستجو کن..." aria-label="جستجو در منو"></label>
+        </div>
+        <div class="menu-meta"><strong id="resultCount">۱۷ انتخاب خوشمزه</strong><span>قیمت‌ها به تومان هستند</span></div>
+
+        <div class="menu-grid" id="menuGrid">
+          <article class="dish" data-category="kebab" data-name="چلو کباب کوبیده مخصوص دو سیخ">
+            <div class="dish-photo"><img src="images/kobide-makhsos.jpeg" alt="چلو کباب کوبیده با برنج زعفرانی و گوجه کبابی" loading="lazy"><span class="dish-tag">محبوب</span></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو کباب کوبیده مخصوص</h3><span class="dish-index">01</span></div><p class="dish-desc">دو سیخ کوبیده گوشت، برنج ایرانی زعفرانی، گوجه کبابی و سماق.</p><div class="dish-bottom"><span class="price">۹۰۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="kebab" data-name="چلو جوجه کباب مخصوص زعفرانی">
+            <div class="dish-photo"><img src="images/zafaron.jpeg" alt="جوجه کباب زعفرانی با گوجه کبابی" loading="lazy"><span class="dish-tag">پرفروش</span></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو جوجه زعفرانی</h3><span class="dish-index">02</span></div><p class="dish-desc">مرغ مزه‌دارشده با زعفران، پیاز و لیمو؛ همراه چلو و گوجه کبابی.</p><div class="dish-bottom"><span class="price">۸۴۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="kebab" data-name="چلو کباب بختیاری">
+            <div class="dish-photo"><img src="images/bakh.jpg" alt="بشقاب کباب ایرانی با برنج و گوجه کبابی" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو کباب بختیاری</h3><span class="dish-index">03</span></div><p class="dish-desc">ترکیب تکه‌های گوشت و جوجه مزه‌دارشده، با برنج زعفرانی و دورچین.</p><div class="dish-bottom"><span class="price">۱٬۱۶۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="kebab" data-name="چلو کباب سلطانی">
+            <div class="dish-photo"><img src="images/soltan.jpg" alt="چلو کباب سلطانی با کوبیده و برگ گوسفندی" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو کباب سلطانی</h3><span class="dish-index">04</span></div><p class="dish-desc">یک سیخ برگ گوسفندی و یک سیخ کوبیده، همراه چلو کره و گوجه.</p><div class="dish-bottom"><span class="price">۱٬۷۸۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="kebab" data-name="چلو کباب شیشلیک">
+            <div class="dish-photo"><img src="images/shishlig.webp" alt="شیشلیک دنده گوسفندی با برنج زعفرانی" loading="lazy"><span class="dish-tag">ویژه</span></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو شیشلیک</h3><span class="dish-index">05</span></div><p class="dish-desc">دنده گوسفندی مزه‌دارشده با پیاز و زعفران، کبابی روی زغال.</p><div class="dish-bottom"><span class="price">۲٬۳۴۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="kebab" data-name="چلو کباب برگ گوسفندی">
+            <div class="dish-photo"><img src="images/barg.webp" alt="کباب برگ گوسفندی و برنج زعفرانی" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو برگ گوسفندی</h3><span class="dish-index">06</span></div><p class="dish-desc">راسته لطیف گوسفندی، مزه‌دار با پیاز و زعفران؛ سرو با چلو و گوجه.</p><div class="dish-bottom"><span class="price">۱٬۴۸۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="traditional" data-name="پک دیزی آبگوشت">
+            <div class="dish-photo"><img src="images/dizi.jpg" alt="دیزی سنتی ایرانی با نان و سبزی خوردن" loading="lazy"><span class="dish-tag">سنتی</span></div>
+            <div class="dish-content"><div class="dish-head"><h3>پک دیزی</h3><span class="dish-index">07</span></div><p class="dish-desc">آبگوشت جاافتاده با گوشت، نخود، لوبیا، سیب‌زمینی و لیموعمانی.</p><div class="dish-bottom"><span class="price">۸۷۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="traditional rice" data-name="قیمه نثار قزوینی">
+            <div class="dish-photo"><img src="images/gheime.jpg" alt="قیمه نثار قزوینی با برنج زعفرانی و خلال بادام" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>قیمه نثار قزوینی</h3><span class="dish-index">08</span></div><p class="dish-desc">برنج زعفرانی با گوشت خورشتی، خلال بادام و پسته، زرشک و پوست پرتقال.</p><div class="dish-bottom"><span class="price">۹۷۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="traditional rice" data-name="چلو خورشت قرمه سبزی">
+            <div class="dish-photo"><img src="images/ghorme.webp" alt="خورشت قرمه سبزی با لوبیا قرمز و لیموعمانی" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو قرمه‌سبزی</h3><span class="dish-index">09</span></div><p class="dish-desc">سبزی سرخ‌شده، گوشت گوسفندی، لوبیا قرمز و لیموعمانی؛ با برنج ایرانی.</p><div class="dish-bottom"><span class="price">۵۵۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="traditional rice" data-name="چلو خورشت قیمه سیب زمینی">
+            <div class="dish-photo"><img src="images/gheime-sibzamini.jpeg" alt="خورشت قیمه با لپه و سیب‌زمینی خلالی" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو قیمه سیب‌زمینی</h3><span class="dish-index">10</span></div><p class="dish-desc">خورشت لپه و گوشت با رب گوجه و لیموعمانی، روی آن سیب‌زمینی خلالی.</p><div class="dish-bottom"><span class="price">۵۵۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="rice" data-name="باقالی پلو با ران مرغ سس پز">
+            <div class="dish-photo"><img src="images/baghalio-morgh.jpg" alt="باقالی پلو با شوید و مرغ" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>باقالی‌پلو با ران مرغ</h3><span class="dish-index">11</span></div><p class="dish-desc">برنج معطر با شوید و باقالی سبز، همراه ران مرغ سس‌پز و ته‌دیگ.</p><div class="dish-bottom"><span class="price">۷۲۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="rice" data-name="چلو ماهی قزل آلا سرخ شده">
+            <div class="dish-photo"><img src="images/ghezel.jpeg" alt="ماهی قزل‌آلای سرخ‌شده با برنج زعفرانی و لیمو" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو ماهی قزل‌آلا</h3><span class="dish-index">12</span></div><p class="dish-desc">ماهی قزل‌آلای سرخ‌شده، برنج سفید و زعفرانی، شوید و لیموترش.</p><div class="dish-bottom"><span class="price">۱٬۰۲۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="rice" data-name="چلو ماهیچه گوسفندی باقالی پلو">
+            <div class="dish-photo"><img src="images/mahiche.jpeg" alt="ماهیچه گوسفندی با باقالی پلو و شوید" loading="lazy"><span class="dish-tag">مجلسی</span></div>
+            <div class="dish-content"><div class="dish-head"><h3>چلو ماهیچه گوسفندی</h3><span class="dish-index">13</span></div><p class="dish-desc">ماهیچه آرام‌پز و نرم، همراه باقالی‌پلو شویددار و ته‌دیگ زعفرانی.</p><div class="dish-bottom"><span class="price">۲٬۵۰۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="starter" data-name="میرزا قاسمی">
+            <div class="dish-photo"><img src="images/Mirza-Ghasemi2.jpg" alt="میرزا قاسمی با بادمجان دودی و تخم‌مرغ" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>میرزا قاسمی</h3><span class="dish-index">14</span></div><p class="dish-desc">بادمجان کبابی دودی، گوجه، سیر و تخم‌مرغ؛ از مزه‌های محبوب شمالی.</p><div class="dish-bottom"><span class="price">۳۳۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="starter" data-name="کشک بادمجان">
+            <div class="dish-photo"><img src="images/kashk.webp" alt="کشک بادمجان با نعناع داغ و پیاز داغ" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>کشک بادمجان</h3><span class="dish-index">15</span></div><p class="dish-desc">بادمجان کبابی، کشک، پیازداغ، سیر و نعناع‌داغ با گردوی خردشده.</p><div class="dish-bottom"><span class="price">۳۳۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="starter" data-name="سالاد شیرازی">
+            <div class="dish-photo"><img src="images/SHIRAZ.jpeg" alt="سالاد شیرازی با خیار و گوجه و پیاز" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>سالاد شیرازی</h3><span class="dish-index">16</span></div><p class="dish-desc">خیار، گوجه و پیاز نگینی با آب‌لیمو و سبزی معطر تازه.</p><div class="dish-bottom"><span class="price">۹۰٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <article class="dish" data-category="starter" data-name="زیتون پرورده">
+            <div class="dish-photo"><img src="images/parvarde.jpg" alt="زیتون پرورده با گردو و رب انار" loading="lazy"></div>
+            <div class="dish-content"><div class="dish-head"><h3>زیتون پرورده</h3><span class="dish-index">17</span></div><p class="dish-desc">زیتون سبز، گردو، رب انار، سیر و سبزی‌های معطر شمالی.</p><div class="dish-bottom"><span class="price">۹۵٬۰۰۰ <small>تومان</small></span><span class="detail-mark">✳</span></div></div>
+          </article>
+          <div class="empty" id="emptyState">غذایی با این اسم پیدا نشد. یه چیز دیگه امتحان کن.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature" id="signature">
+      <div class="wrap signature-inner">
+        <div class="signature-copy"><div class="signature-kicker">CHEF'S SELECTION / انتخاب ویژه</div><h2>برای وقت‌هایی که یک غذای معمولی کافی نیست.</h2><p>از شیشلیک زغالی تا ماهیچه‌ی آرام‌پز؛ انتخاب‌های ویژه‌ی منو برای وقت‌هایی که دلت یک سفره‌ی مفصل می‌خواهد.</p></div>
+        <div class="signature-chip"><strong>✦</strong><span>طعم اصیل ایرانی</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom-menu">
+    <div class="wrap bottom-inner">
+      <div class="bottom-brand">دود <span>&</span> زعفران</div>
+      <div class="bottom-note">این صفحه یک نمونه‌کار با نام تجاری فرضی است. قیمت‌ها از منوی منتشرشده‌ی رستوران‌های تهران در مهر ۱۴۰۵ برداشت شده‌اند و ممکن است با قیمت روز یا رستوران‌های دیگر تفاوت داشته باشند.</div>
+      <a class="top-link" href="#home">بازگشت به بالا ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const filterButtons = [...document.querySelectorAll('.filter-btn')];
+    const dishes = [...document.querySelectorAll('.dish')];
+    const searchInput = document.getElementById('menuSearch');
+    const resultCount = document.getElementById('resultCount');
+    const emptyState = document.getElementById('emptyState');
+    let activeFilter = 'all';
+    const faDigits = n => String(n).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+    function applyFilters(){
+      const query = searchInput.value.trim().toLocaleLowerCase('fa');
+      let shown = 0;
+      dishes.forEach(card => {
+        const categories = card.dataset.category.split(' ');
+        const matchesCategory = activeFilter === 'all' || categories.includes(activeFilter);
+        const matchesText = card.dataset.name.toLocaleLowerCase('fa').includes(query);
+        const visible = matchesCategory && matchesText;
+        card.hidden = !visible;
+        if(visible) shown++;
+      });
+      resultCount.textContent = `${faDigits(shown)} انتخاب خوشمزه`;
+      emptyState.style.display = shown ? 'none' : 'block';
+    }
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      filterButtons.forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      activeFilter = button.dataset.filter;
+      applyFilters();
+    }));
+    searchInput.addEventListener('input', applyFilters);
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+  </script>
+</body>
+</html>

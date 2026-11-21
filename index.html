@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="./fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="description" content="رزومه آنلاین طاها رودکرمی؛ توسعه‌دهنده بک‌اند با تمرکز بر Python، Django و Django REST Framework." />
+    <title>طاها رودکرمی | توسعه‌دهنده تخصصی بک‌اند</title>
+  </head>
+  <body class="font-sans text-slate-800 dark:text-slate-100 transition-all duration-300 min-h-screen">
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <header id="header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 px-4 sm:px-6 pt-4 overflow-x-clip">
+      <nav class="nav-bar mx-auto max-w-5xl flex items-center justify-between gap-4" aria-label="ناوبری اصلی">
+        <a href="#hero" class="nav-logo shrink-0">
+          <span id="nav-logo"></span>
+        </a>
+        <ul id="nav-links" class="hidden lg:flex items-center gap-0.5"></ul>
+        <div class="flex items-center gap-2 shrink-0">
+          <!-- برای زبان فارسی پرچمی نمایش داده نمی‌شود؛ انگلیسی دو پرچم و عربی پرچم عربستان دارد. -->
+          <div id="language-picker" class="language-picker">
+            <button id="language-trigger" class="language-trigger icon-btn" type="button"
+              aria-haspopup="true" aria-expanded="false" aria-controls="language-menu" aria-label="انتخاب زبان سایت">
+              <span id="language-current">فارسی</span>
+              <svg class="language-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5" /></svg>
+            </button>
+            <div id="language-menu" class="language-menu hidden" role="menu" aria-label="انتخاب زبان سایت">
+              <button class="language-option" type="button" role="menuitemradio" aria-checked="true" data-language="fa"><span class="language-option-flag" aria-hidden="true"></span><span>فارسی</span></button>
+              <button class="language-option" type="button" role="menuitemradio" aria-checked="false" data-language="en"><span class="language-option-flag" aria-hidden="true">🇬🇧 🇺🇸</span><span>English</span></button>
+              <button class="language-option" type="button" role="menuitemradio" aria-checked="false" data-language="ar"><span class="language-option-flag" aria-hidden="true">🇸🇦</span><span>العربية</span></button>
+            </div>
+          </div>
+          <button id="theme-toggle" type="button" class="icon-btn" aria-label="تغییر حالت رنگی"></button>
+          <button id="mobile-menu-btn" type="button" class="icon-btn lg:hidden" aria-label="باز کردن منو" aria-expanded="false"></button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="mobile-menu hidden lg:hidden mx-auto max-w-5xl mt-2">
+        <ul id="mobile-nav-links" class="flex flex-col p-2"></ul>
+      </div>
+    </header>
+
+    <main class="relative max-w-5xl mx-auto px-4 sm:px-6 pt-28 pb-20 overflow-x-clip">
+      <section id="hero" class="min-h-[88vh] flex items-center mb-32 scroll-mt-28"></section>
+      <section id="skills" class="mb-32 scroll-mt-28"></section>
+      <section id="experience" class="mb-32 scroll-mt-28"></section>
+      <section id="projects" class="mb-32 scroll-mt-28"></section>
+      <section id="contact" class="scroll-mt-28"></section>
+    </main>
+
+    <footer id="footer"></footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

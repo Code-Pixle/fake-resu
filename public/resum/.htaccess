@@ -1,0 +1,4 @@
+DirectoryIndex index.html
+RewriteEngine On
+# Support extensionless project URLs such as /resum/dood-o-zafaron/index
+RewriteRule ^([^/]+)/index/?$ $1/index.html [L]

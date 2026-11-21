@@ -1,0 +1,60 @@
+{
+  "downloaded": [
+    {
+      "source": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-02-5a14c303.avif",
+      "bytes": 19346
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-03-fc3d75bd.avif",
+      "bytes": 38109
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85",
+      "local": "images/cars-01-748c8c9c.avif",
+      "bytes": 49168
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-04-b9517a1a.avif",
+      "bytes": 84810
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-06-fe478790.avif",
+      "bytes": 115235
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-05-fd90032a.avif",
+      "bytes": 154772
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-07-e2a336fa.avif",
+      "bytes": 98588
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-08-d4953139.avif",
+      "bytes": 52690
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-09-cc059dfb.avif",
+      "bytes": 60629
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-10-c60d13a0.avif",
+      "bytes": 168547
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/cars-11-9ea7441a.avif",
+      "bytes": 164002
+    }
+  ],
+  "failed": []
+}

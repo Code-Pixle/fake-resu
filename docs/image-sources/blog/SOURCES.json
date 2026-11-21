@@ -1,0 +1,35 @@
+{
+  "downloaded": [
+    {
+      "source": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/blog-01-6badbd99.avif",
+      "bytes": 30940
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/blog-03-01fdca07.avif",
+      "bytes": 50505
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/blog-02-43a1d085.avif",
+      "bytes": 41118
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/blog-04-4a204aee.avif",
+      "bytes": 225748
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/blog-05-37a7232a.avif",
+      "bytes": 46368
+    },
+    {
+      "source": "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=85",
+      "local": "images/blog-06-a8090b62.avif",
+      "bytes": 67180
+    }
+  ],
+  "failed": []
+}

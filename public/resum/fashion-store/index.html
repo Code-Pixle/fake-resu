@@ -1,0 +1,75 @@
+<!doctype html><html lang=fa dir=rtl><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ورنا | مد و پوشاک</title>
+  <link rel="stylesheet" href="../../fonts/local-fonts.css">
+<style>
+:root{--bg:#f2ebe0;--ink:#17120e;--ac:#c4572e;--ol:#4b5233;--card:#fbf7f0}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{font-family:Vazirmatn,sans-serif;background:var(--bg);color:var(--ink)}button,input,textarea{font:inherit}button{cursor:pointer;border:0}
+.bar{background:var(--ink);color:var(--bg);text-align:center;padding:8px;font-size:13px}
+header{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;background:#f2ebe0e6;backdrop-filter:blur(10px);border-bottom:1px solid #17120e22}
+.logo{font-size:30px;font-weight:900;letter-spacing:3px}nav{display:flex;gap:26px}nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--ac)}
+.ic{background:none;font-size:21px;position:relative;margin-right:14px}.ic b{position:absolute;top:-8px;left:-10px;background:var(--ac);color:#fff;font-size:11px;border-radius:20px;padding:0 6px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:4vw;padding:8vh 5vw;align-items:center}
+.hero h1{font-size:clamp(46px,8vw,120px);line-height:1.05;font-weight:900}.hero em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--ink)}
+.hero p{margin:22px 0;max-width:420px;line-height:2;opacity:.75}
+.btn{background:var(--ink);color:var(--bg);padding:14px 34px;border-radius:50px;transition:.3s;display:inline-block;text-decoration:none}.btn:hover{background:var(--ac);transform:translateY(-3px)}
+.arch{border-radius:999px 999px 24px 24px;aspect-ratio:3/4;max-height:68vh;width:100%;max-width:400px;margin-inline:auto;font-size:110px}
+.ph{position:relative;overflow:hidden;display:grid;place-items:center;font-size:60px}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.ph small{position:absolute;bottom:6px;font-size:10px;opacity:.45;direction:ltr}
+.mq{overflow:hidden;background:var(--ac);color:#fff;padding:14px 0;white-space:nowrap}.mq div{display:inline-block;animation:m 30s linear infinite;font-size:22px;font-weight:800}@keyframes m{to{transform:translateX(50%)}}
+section{padding:8vh 5vw}h2{font-size:clamp(30px,5vw,56px);font-weight:900;margin-bottom:24px}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cat{aspect-ratio:4/3;border-radius:24px;display:flex;align-items:end;padding:22px;font-size:26px;font-weight:800;cursor:pointer;transition:.4s;position:relative;overflow:hidden}.cat:hover{transform:scale(.97)}.cat span{position:relative;z-index:1}
+.tools{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:22px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{background:none;border:1px solid var(--ink);padding:8px 20px;border-radius:40px}.chip.on{background:var(--ink);color:var(--bg)}
+select{background:none;border:1px solid var(--ink);padding:8px 14px;border-radius:40px}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px 18px}
+.card{cursor:pointer;position:relative}.card .ph{aspect-ratio:3/4;border-radius:20px;transition:.4s}.card:hover .ph{transform:translateY(-6px);box-shadow:0 20px 30px #0002}.card h4{margin:12px 0 2px;font-weight:500}.pr b{font-weight:800}.pr s{opacity:.45;margin-right:8px;font-size:13px}
+.bd{position:absolute;top:12px;right:12px;background:var(--ac);color:#fff;font-size:12px;padding:2px 12px;border-radius:20px;z-index:2}.hrt{position:absolute;top:8px;left:10px;z-index:2;background:#fffc;border-radius:50%;width:34px;height:34px;font-size:17px}
+.ban{background:var(--ol);color:#f2ebe0;border-radius:32px;margin:0 5vw;padding:7vh 6vw;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.ban h2{margin:0}
+footer{padding:6vh 5vw;text-align:center;opacity:.6;font-size:14px}
+.ov{position:fixed;inset:0;background:#0007;z-index:40;display:none}.ov.show{display:block}
+#drawer{position:fixed;top:0;left:0;height:100%;width:min(420px,100%);background:var(--card);z-index:50;transform:translateX(-102%);transition:.35s;padding:22px;display:flex;flex-direction:column;gap:12px}#drawer.open{transform:none}
+#items{flex:1;overflow:auto}.it{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #17120e18;align-items:center}.it .ph{width:60px;height:76px;border-radius:12px;font-size:26px;flex:none}.it div{flex:1;font-size:14px}.q button{width:26px;height:26px;border-radius:50%;background:#17120e14}
+.fs{height:6px;background:#17120e18;border-radius:6px;overflow:hidden}.fs i{display:block;height:100%;background:var(--ac);transition:.4s}
+.cp{display:flex;gap:6px}.cp input,.f input,.f textarea{flex:1;padding:11px 14px;border:1px solid #17120e44;border-radius:12px;background:#fff8}
+.md{position:fixed;inset:0;z-index:60;display:none;place-items:center}.md.show{display:grid}.box{background:var(--card);border-radius:28px;width:min(760px,94%);max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}.box>.ph{min-height:340px}.box .in{padding:28px;display:flex;flex-direction:column;gap:14px}.x{position:absolute;left:16px;top:12px;background:#fffc;width:34px;height:34px;border-radius:50%;z-index:3}
+.opt{display:flex;gap:8px;flex-wrap:wrap}.opt label{border:1px solid #17120e55;border-radius:10px;padding:6px 14px;cursor:pointer}.opt label:has(:checked){background:var(--ink);color:var(--bg)}.opt input{display:none}
+.f{display:grid;gap:10px;padding:28px;grid-column:1/-1}.sum{background:#17120e0d;border-radius:14px;padding:14px;font-size:14px;line-height:2}
+@media(max-width:800px){.hero,.box,.cats{grid-template-columns:1fr}nav{display:none}}
+</style></head><body>
+<div class=bar>ارسال رایگان برای سفارش‌های بالای ۸٬۰۰۰٬۰۰۰ تومان · کد تخفیف <b>VERNA10</b></div>
+<header><b class=logo>ورنا</b><nav><a href=#shop>فروشگاه</a><a href=#cats>دسته‌ها</a><a href=#new>تازه‌ها</a></nav><div><button class=ic id=wb>♡<b id=wn>0</b></button><button class=ic id=cb>🛍<b id=cn>0</b></button></div></header>
+<section class=hero><div><h1>پوشش امروز،<br><em>سبک</em> شما</h1><p>مجموعه‌ی پاییز–زمستان؛ پارچه‌های طبیعی، دوخت دقیق و رنگ‌هایی که با هم می‌خوانند.</p><a class=btn href=#shop>مشاهده‌ی مجموعه</a></div><div class="ph arch" style="background:linear-gradient(160deg,#e8b99b,#c4572e)">👗<img src="images/fashion-store-01-08addc06.avif" onerror="this.remove()"><small>images/fashion-hero.jpg</small></div></section>
+<div class=mq><div id=mq></div></div>
+<section id=cats><h2>خرید بر اساس دسته</h2><div class=cats id=catgrid></div></section>
+<section id=shop><h2>همه‌ی محصولات</h2><div class=tools><div class=chips id=chips></div><select id=so><option value=0>مرتب‌سازی</option><option value=1>ارزان‌ترین</option><option value=2>گران‌ترین</option></select></div><div id=grid></div></section>
+<div class=ban id=new><div><h2>اولین سفارش؟</h2><p>با کد VERNA10 ده درصد تخفیف بگیرید.</p></div><a class=btn style="background:#f2ebe0;color:#17120e" href=#shop>شروع خرید</a></div>
+<footer>© ورنا · همه‌ی حقوق محفوظ است</footer>
+<div class=ov id=ov></div><aside id=drawer><h3>سبد خرید</h3><div id=items></div><div class=fs><i id=fb></i></div><small id=ft></small><div class=cp><input id=cc placeholder="کد تخفیف"><button class=btn style="padding:8px 18px" onclick=coupon()>اعمال</button></div><div class=sum id=sm></div><button class=btn onclick=checkout()>ادامه و ثبت سفارش</button></aside>
+<div class=md id=md><div class=box id=bx></div></div>
+<script>
+const P=[["پیراهن کتان","مردانه",2900000,0,"👔",30,"جدید"],["شلوار جین استریچ","مردانه",4800000,5900000,"👖",215,"تخفیف"],["کت اسپرت پشمی","مردانه",9800000,0,"🧥",20,""],["مانتوی بلند کتان","زنانه",6200000,0,"👘",340,"جدید"],["شومیز ساتن","زنانه",3600000,4200000,"👚",150,"تخفیف"],["روسری ابریشم","زنانه",2400000,0,"🧣",280,""],["هودی اورسایز","اسپرت",4100000,0,"🧶",190,"جدید"],["کفش کتانی","اسپرت",8900000,0,"👟",10,""],["تیشرت نخی ساده","اسپرت",1500000,0,"👕",100,""],["کیف چرم دستی","اکسسوری",7200000,0,"👜",25,"جدید"],["کلاه کپ","اکسسوری",1200000,0,"🧢",60,""],["کمربند چرم","اکسسوری",2100000,2600000,"🎽",35,"تخفیف"]].map((a,i)=>({id:i,n:a[0],c:a[1],p:a[2],o:a[3],e:a[4],h:a[5],b:a[6],img:['images/fashion-store-02-498bb3f3.avif','images/fashion-store-03-423a509c.avif','images/fashion-store-04-8d6ab58f.avif','images/fashion-store-05-fdf99edd.avif','images/fashion-store-02-498bb3f3.avif','images/fashion-store-06-b0bb8777.avif','images/fashion-store-07-2b5e4cf5.avif','images/fashion-store-08-a50bca66.avif','images/fashion-store-09-165ef583.avif','images/fashion-store-10-7bbf1ac8.avif','images/fashion-store-11-cf6d2f53.avif','images/kamar.jpeg'][i]}));
+const CAT=['همه','مردانه','زنانه','اسپرت','اکسسوری'],COL=[['مشکی','#17120e'],['کرم','#e8dcc6'],['زیتونی','#4b5233']];
+const $=s=>document.querySelector(s),f=n=>Math.round(n).toLocaleString('fa-IR')+' تومان',J=k=>JSON.parse(localStorage[k]||'[]');
+let cat='همه',cart=J('fc'),wl=J('fw'),cp=localStorage.fcp||'';
+const ph=(p,x='')=>`<div class=ph style="background:linear-gradient(150deg,hsl(${p.h} 55% 80%),hsl(${p.h+25} 50% 58%))">${p.e}<img src="${p.img}" onerror="this.remove()">${x}</div>`;
+$('#mq').innerHTML=('ورنا ✦ پاییز ۱۴۰۵ ✦ ارسال به سراسر کشور ✦ ').repeat(14);
+$('#catgrid').innerHTML=CAT.slice(1,4).map((c,i)=>`<div class=cat style="background:linear-gradient(135deg,hsl(${[30,340,100][i]} 50% 72%),hsl(${[20,330,90][i]} 40% 50%))" onclick="cat='${c}';draw();location.hash='shop'"><span>${c}</span></div>`).join('');
+function draw(){$('#chips').innerHTML=CAT.map(c=>`<button class="chip ${c==cat?'on':''}" onclick="cat='${c}';draw()">${c}</button>`).join('');
+let l=P.filter(p=>cat=='همه'||p.c==cat);const s=$('#so').value;if(s>0)l.sort((a,b)=>s==1?a.p-b.p:b.p-a.p);
+$('#grid').innerHTML=l.map(p=>`<div class=card onclick="show(${p.id})">${p.b?`<span class=bd>${p.b}</span>`:''}<button class=hrt onclick="event.stopPropagation();tw(${p.id})">${wl.includes(p.id)?'♥':'♡'}</button>${ph(p)}<h4>${p.n}</h4><div class=pr><b>${f(p.p)}</b>${p.o?`<s>${f(p.o)}</s>`:''}</div></div>`).join('');
+$('#wn').textContent=wl.length.toLocaleString('fa-IR');$('#cn').textContent=cart.reduce((a,b)=>a+b.q,0).toLocaleString('fa-IR');
+$('#items').innerHTML=cart.map((x,i)=>`<div class=it>${ph(P[x.id])}<div><b>${P[x.id].n}</b><br><small>${x.s} · ${x.c}</small><br>${f(P[x.id].p)}</div><span class=q><button onclick="q(${i},1)">+</button> ${x.q.toLocaleString('fa-IR')} <button onclick="q(${i},-1)">−</button></span></div>`).join('')||'<p style="padding:30px 0;opacity:.6">سبد خرید خالی است</p>';
+const t=T();$('#fb').style.width=Math.min(100,t.sub/80000)+'%';$('#ft').textContent=t.sub>=8e6?'🎉 ارسال شما رایگان است':`${f(8e6-t.sub)} تا ارسال رایگان`;
+$('#sm').innerHTML=`جمع: ${f(t.sub)}<br>تخفیف: ${f(t.d)}<br>ارسال: ${t.sh?f(t.sh):'رایگان'}<br><b>قابل پرداخت: ${f(t.tot)}</b>`}
+function T(){const sub=cart.reduce((a,b)=>a+P[b.id].p*b.q,0),d=cp=='VERNA10'?sub*.1:0,sh=!cart.length||sub>=8e6?0:180000;return{sub,d,sh,tot:sub-d+sh}}
+const sv=()=>{localStorage.fc=JSON.stringify(cart);localStorage.fw=JSON.stringify(wl);localStorage.fcp=cp;draw()};
+function tw(id){wl=wl.includes(id)?wl.filter(x=>x!=id):[...wl,id];sv()}
+function q(i,d){cart[i].q+=d;if(cart[i].q<1)cart.splice(i,1);sv()}
+function coupon(){cp=$('#cc').value.trim().toUpperCase();sv();if(cp!='VERNA10')alert('کد نامعتبر است')}
+function md(h){const m=$('#md');m.className='md'+(h?' show':'');$('#ov').className='ov'+(h?' show':'');if(h)$('#bx').innerHTML=`<button class=x onclick="md()">✕</button>`+h}
+function show(id){const p=P[id];md(`${ph(p)}<div class=in><h2 style="font-size:28px;margin:0">${p.n}</h2><div class=pr><b>${f(p.p)}</b>${p.o?`<s>${f(p.o)}</s>`:''}</div><b>رنگ</b><div class=opt>${COL.map((c,i)=>`<label><input type=radio name=c value=${c[0]} ${i?'':'checked'}>${c[0]}</label>`).join('')}</div><b>سایز</b><div class=opt>${['S','M','L','XL'].map((s,i)=>`<label><input type=radio name=s value=${s} ${i==1?'checked':''}>${s}</label>`).join('')}</div><button class=btn onclick="add(${id})">افزودن به سبد</button></div>`)}
+function add(id){const s=$('[name=s]:checked').value,c=$('[name=c]:checked').value,e=cart.find(x=>x.id==id&&x.s==s&&x.c==c);e?e.q++:cart.push({id,s,c,q:1});md();sv();dr(1)}
+function dr(o){$('#drawer').classList.toggle('open',o);$('#ov').className='ov'+(o?' show':'')}
+$('#cb').onclick=()=>dr(1);$('#ov').onclick=()=>{dr(0);md()};$('#wb').onclick=()=>{cat='همه';$('#grid').innerHTML=P.filter(p=>wl.includes(p.id)).map(p=>`<div class=card onclick="show(${p.id})">${ph(p)}<h4>${p.n}</h4><b>${f(p.p)}</b></div>`).join('')||'<p>علاقه‌مندی‌ای ثبت نشده</p>';location.hash='shop'};
+$('#so').onchange=draw;
+function checkout(){if(!cart.length)return;dr(0);const t=T();md(`<form class=f onsubmit="pay(event)"><h2 style="font-size:28px">تکمیل سفارش</h2><div style="display:flex;gap:10px"><input required placeholder="نام و نام خانوادگی"><input required placeholder="موبایل" pattern="09[0-9]{9}"></div><input required placeholder="شهر"><textarea required rows=2 placeholder="آدرس کامل"></textarea><div class=opt><label><input type=radio name=m checked>پست عادی</label><label><input type=radio name=m>پیک اکسپرس (+${f(170000)})</label></div><div class=sum>مبلغ نهایی: <b>${f(t.tot)}</b></div><button class=btn>پرداخت (آزمایشی)</button></form>`)}
+function pay(e){e.preventDefault();const code='VN-'+Math.floor(Math.random()*9e5+1e5);cart=[];sv();md(`<div class=f style="text-align:center;padding:60px"><div style="font-size:60px">✓</div><h2>سفارش ثبت شد</h2><p>کد پیگیری: <b>${code}</b></p><button class=btn onclick="md()">بازگشت به فروشگاه</button></div>`)}
+draw();
+</script></body></html>

@@ -1,0 +1,61 @@
+<!doctype html><html lang=fa dir=rtl><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>اتو شیراز | بازار خودرو</title>
+  <link rel="stylesheet" href="../../fonts/local-fonts.css">
+<style>
+:root{--bg:#06141a;--bg2:#0b222b;--gold:#e0b862;--teal:#1d8a8f;--tx:#f1ead8}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{font-family:Vazirmatn,sans-serif;background:var(--bg);color:var(--tx);background-image:radial-gradient(circle at 80% 0,#1d8a8f33,transparent 40%),radial-gradient(circle at 10% 60%,#e0b86216,transparent 40%)}
+button,input,select{font:inherit}button{cursor:pointer;border:0}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;position:sticky;top:0;z-index:20;background:#06141ae8;backdrop-filter:blur(10px);border-bottom:1px solid #e0b86233}
+.logo{font-size:26px;font-weight:900;color:var(--gold);letter-spacing:1px}.logo small{color:var(--tx);font-weight:300;font-size:13px;margin-right:8px}
+nav a{color:var(--tx);text-decoration:none;margin-right:22px;opacity:.8}nav a:hover{color:var(--gold)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:4vw;padding:9vh 5vw 6vh;align-items:center}
+.hero h1{font-size:clamp(44px,7.5vw,108px);line-height:1.05;font-weight:900}.hero h1 span{color:var(--gold)}.hero p{margin:20px 0 28px;max-width:480px;line-height:2;opacity:.75}
+.go{background:var(--gold);color:#1a1405;font-weight:800;padding:14px 34px;border-radius:50px;text-decoration:none;display:inline-block;transition:.3s}.go:hover{transform:translateY(-3px);box-shadow:0 10px 30px #e0b86255}
+.frame{border:2px solid var(--gold);border-radius:999px 999px 20px 20px;aspect-ratio:3/4;max-width:380px;margin-inline:auto;width:100%;padding:12px;position:relative}.frame>.ph{height:100%;border-radius:999px 999px 10px 10px}
+.ph{position:relative;overflow:hidden;display:grid;place-items:center;font-size:64px;background:linear-gradient(160deg,#123a45,#0a1f27)}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.ph small{position:absolute;bottom:8px;font-size:10px;opacity:.4;direction:ltr}
+.stats{display:flex;gap:40px;margin-top:34px}.stats b{font-size:34px;color:var(--gold);display:block}.stats span{opacity:.6;font-size:13px}
+section{padding:5vh 5vw}h2{font-size:clamp(28px,4vw,46px);font-weight:900;margin-bottom:6px}.sub{opacity:.6;margin-bottom:24px}
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--bg2);padding:16px;border-radius:20px;border:1px solid #e0b86226;margin-bottom:26px}
+input,select{background:#06141a;border:1px solid #e0b86244;color:var(--tx);padding:10px 14px;border-radius:12px}input[type=range]{accent-color:var(--gold);padding:0}
+.chip{background:none;border:1px solid #e0b86255;color:var(--tx);padding:8px 18px;border-radius:40px}.chip.on{background:var(--gold);color:#1a1405;font-weight:800}
+#list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+.car{background:var(--bg2);border-radius:26px 26px 18px 18px;overflow:hidden;border:1px solid #e0b86220;transition:.35s;cursor:pointer;position:relative}.car:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 40px #0008}
+.car .ph{aspect-ratio:16/10;border-radius:0 0 50% 50%/0 0 22px 22px}.car .in{padding:16px 18px 18px}.car h3{font-size:19px}.meta{opacity:.6;font-size:13px;margin:4px 0 12px}.price{font-size:23px;font-weight:900;color:var(--gold)}
+.tag{position:absolute;z-index:2;top:12px;right:12px;background:#06141ad9;color:var(--gold);font-size:12px;padding:3px 12px;border-radius:20px}.fav{position:absolute;z-index:2;top:8px;left:10px;background:#06141ad9;width:34px;height:34px;border-radius:50%;color:var(--gold);font-size:17px}
+.cmp{display:flex;align-items:center;gap:6px;font-size:13px;margin-top:10px;opacity:.85}
+#cbar{position:fixed;bottom:16px;left:50%;transform:translate(-50%,200%);background:var(--gold);color:#1a1405;padding:12px 24px;border-radius:50px;z-index:30;display:flex;gap:14px;align-items:center;font-weight:800;transition:.4s;box-shadow:0 10px 40px #000a}#cbar.on{transform:translate(-50%,0)}#cbar button{background:#1a1405;color:var(--gold);padding:6px 18px;border-radius:30px}
+.md{position:fixed;inset:0;background:#000b;z-index:50;display:none;place-items:center;padding:12px}.md.show{display:grid}.box{background:var(--bg2);border:1px solid var(--gold);border-radius:28px;width:min(860px,100%);max-height:94vh;overflow:auto;padding:24px;position:relative}.x{position:absolute;left:16px;top:14px;background:#0004;color:var(--tx);width:34px;height:34px;border-radius:50%}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:22px}table{width:100%;border-collapse:collapse}td,th{padding:9px 8px;border-bottom:1px solid #e0b86222;text-align:right;font-size:14px}th{color:var(--gold)}
+.calc,.form{background:#06141a;border-radius:18px;padding:16px;display:grid;gap:10px;margin-top:14px}.res{font-size:22px;color:var(--gold);font-weight:900}
+.form input{width:100%}
+footer{padding:6vh 5vw;text-align:center;opacity:.5;font-size:13px;border-top:1px solid #e0b86222}
+@media(max-width:800px){.hero,.g2{grid-template-columns:1fr}nav{display:none}}
+</style></head><body>
+<header><div class=logo>اتو شیراز<small>بازار خودرو</small></div><nav><a href=#cars>خودروها</a><a href=#fav onclick="favOnly=!favOnly;draw()">علاقه‌مندی‌ها ♥ <b id=fc></b></a></nav></header>
+<section class=hero><div><h1>خودروی <span>رویایی</span><br>در شیراز</h1><p>قیمت‌های به‌روز بازار آزاد (۲۰ آبان ۱۴۰۵)، مقایسه‌ی هم‌زمان چند مدل، محاسبه‌ی اقساط و رزرو بازدید حضوری؛ همه در یک صفحه.</p><a class=go href=#cars>مشاهده‌ی خودروها</a><div class=stats><div><b data-n=10>۰</b><span>مدل موجود</span></div><div><b data-n=3>۰</b><span>مقایسه هم‌زمان</span></div><div><b data-n=24>۰</b><span>ساعت پاسخ‌گویی</span></div></div></div><div class=frame><div class=ph>🚗<img src="images/bnz.jpg" onerror="this.remove()"><small>images/cars-hero.jpg</small></div></div></section>
+<section id=cars><h2>خودروهای موجود</h2><p class=sub>قیمت‌ها بازار آزاد و تقریبی‌اند؛ برای قیمت نهایی درخواست بازدید ثبت کنید.</p>
+<div class=tools><input id=s placeholder="جستجوی مدل..."><span id=chips></span><label>سقف قیمت: <b id=pv></b> <input type=range id=pr min=1500 max=5000 step=100 value=5000></label><select id=o><option value=0>پیش‌فرض</option><option value=1>ارزان‌ترین</option><option value=2>گران‌ترین</option></select></div><div id=list></div></section>
+<footer>اتو شیراز · قیمت‌ها صرفاً جهت اطلاع و بدون تعهد خرید است</footer>
+<div id=cbar><span id=cc></span><button onclick=compare()>مقایسه</button><button onclick="cmpl=[];draw()">پاک‌کردن</button></div>
+<div class=md id=md><div class=box id=bx></div></div>
+<script>
+const C=[["پژو ۲۰۷ TU3 دنده‌ای","ایران‌خودرو","هاچ‌بک","دنده‌ای",2680,"🚗",200],["پژو ۲۰۷ دنده‌ای پانوراما","ایران‌خودرو","هاچ‌بک","دنده‌ای",3480,"🚙",180],["پژو ۲۰۷ اتوماتیک پانوراما","ایران‌خودرو","هاچ‌بک","اتوماتیک",4490,"🚘",170],["دنا پلاس MT6","ایران‌خودرو","سدان","دنده‌ای",3350,"🚗",190],["دنا پلاس اتوماتیک","ایران‌خودرو","سدان","اتوماتیک",4470,"🚙",160],["تارا دستی V1","ایران‌خودرو","سدان","دنده‌ای",3240,"🚘",205],["تارا اتوماتیک توربو","ایران‌خودرو","سدان","اتوماتیک",4515,"🏎️",175],["رانا پلاس","ایران‌خودرو","سدان","دنده‌ای",2515,"🚗",210],["کوییک S","سایپا","هاچ‌بک","دنده‌ای",1787,"🚙",120],["کوییک GXR","سایپا","هاچ‌بک","دنده‌ای",1880,"🚘",130]].map((a,i)=>({id:i,n:a[0],b:a[1],t:a[2],g:a[3],p:a[4]*1e6,e:a[5],h:a[6],img:['images/207-dande.webp','images/207.jpg','images/207-tu3.webp','images/dena-p.webp','images/dena-autho.jpg','images/tara-v1.jpeg','images/tara-auto.webp','images/rana-p.png','images/coiik-s.jpeg','images/coiik-gxr.jpeg'][i]}));
+const $=s=>document.querySelector(s),J=k=>JSON.parse(localStorage[k]||'[]'),fp=n=>n>=1e9?(n/1e9).toLocaleString('fa-IR',{maximumFractionDigits:3})+' میلیارد تومان':(n/1e6).toLocaleString('fa-IR')+' میلیون تومان';
+let fav=J('af'),cmpl=[],br='همه',favOnly=false;
+const ph=c=>`<div class=ph style="background:linear-gradient(150deg,hsl(${c.h} 40% 22%),hsl(${c.h+30} 45% 12%))">${c.e}<img src="${c.img}" onerror="this.remove()"><small>${c.img}</small></div>`;
+function draw(){$('#chips').innerHTML=['همه','ایران‌خودرو','سایپا'].map(b=>`<button class="chip ${b==br?'on':''}" onclick="br='${b}';draw()">${b}</button>`).join(' ');
+$('#pv').textContent=fp(+$('#pr').value*1e6);$('#fc').textContent=fav.length||'';
+let l=C.filter(c=>c.p<=$('#pr').value*1e6&&(br=='همه'||c.b==br)&&c.n.includes($('#s').value)&&(!favOnly||fav.includes(c.id)));const o=$('#o').value;if(o>0)l.sort((a,b)=>o==1?a.p-b.p:b.p-a.p);
+$('#list').innerHTML=l.map(c=>`<div class=car onclick="show(${c.id})"><span class=tag>${c.t} · ${c.g}</span><button class=fav onclick="event.stopPropagation();tf(${c.id})">${fav.includes(c.id)?'♥':'♡'}</button>${ph(c)}<div class=in><h3>${c.n}</h3><div class=meta>${c.b} · مدل ۱۴۰۵</div><div class=price>${fp(c.p)}</div><label class=cmp onclick="event.stopPropagation()"><input type=checkbox ${cmpl.includes(c.id)?'checked':''} onchange="tc(${c.id},this)"> افزودن به مقایسه</label></div></div>`).join('')||'<p>موردی یافت نشد</p>';
+$('#cbar').classList.toggle('on',cmpl.length>0);$('#cc').textContent=cmpl.length.toLocaleString('fa-IR')+' خودرو انتخاب شده'}
+function tf(id){fav=fav.includes(id)?fav.filter(x=>x!=id):[...fav,id];localStorage.af=JSON.stringify(fav);draw()}
+function tc(id,el){if(cmpl.includes(id))cmpl=cmpl.filter(x=>x!=id);else if(cmpl.length<3)cmpl.push(id);else{el.checked=false;alert('حداکثر ۳ خودرو');return}draw()}
+function md(h){const m=$('#md');m.className='md'+(h?' show':'');if(h)$('#bx').innerHTML=`<button class=x onclick="md()">✕</button>`+h}
+function compare(){if(cmpl.length<2)return alert('حداقل ۲ خودرو انتخاب کنید');const a=cmpl.map(i=>C[i]);md(`<h2>مقایسه</h2><table><tr><th></th>${a.map(c=>`<th>${c.n}</th>`).join('')}</tr>${[['قیمت',c=>fp(c.p)],['سازنده',c=>c.b],['بدنه',c=>c.t],['گیربکس',c=>c.g],['مدل',c=>'۱۴۰۵']].map(r=>`<tr><td>${r[0]}</td>${a.map(c=>`<td>${r[1](c)}</td>`).join('')}</tr>`).join('')}</table>`)}
+function show(id){const c=C[id];md(`<div class=g2><div>${ph(c)}<table style="margin-top:14px">${[['قیمت بازار',fp(c.p)],['سازنده',c.b],['بدنه',c.t],['گیربکس',c.g],['مدل','۱۴۰۵']].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table></div><div><h2 style="font-size:28px">${c.n}</h2>
+<div class=calc><b>محاسبه‌ی اقساط (نمونه)</b><label>پیش‌پرداخت: <span id=ppv></span><input type=range id=pp min=20 max=80 value=40 style="width:100%"></label><label>مدت: <span id=mv></span><input type=range id=mm min=12 max=48 step=6 value=24 style="width:100%"></label><div class=res id=rs></div><small style="opacity:.55">سود سالانه فرضی ۲۳٪ — صرفاً نمونه</small></div>
+<form class=form onsubmit="req(event,${id})"><b>درخواست بازدید</b><input required placeholder="نام و نام خانوادگی"><input required placeholder="موبایل" pattern="09[0-9]{9}"><input required type=date><button class=go>ثبت درخواست</button></form></div></div>`);
+const u=()=>{const P=+$('#pp').value,M=+$('#mm').value,L=c.p*(100-P)/100,r=.23/12,m=L*r/(1-Math.pow(1+r,-M));$('#ppv').textContent=P.toLocaleString('fa-IR')+'٪ ('+fp(c.p*P/100)+')';$('#mv').textContent=M.toLocaleString('fa-IR')+' ماه';$('#rs').textContent='قسط ماهانه: '+fp(m)};$('#pp').oninput=$('#mm').oninput=u;u()}
+function req(e,id){e.preventDefault();md(`<div style="text-align:center;padding:50px"><div style="font-size:60px">✓</div><h2>درخواست ثبت شد</h2><p>بازدید ${C[id].n} · کد پیگیری: <b>AS-${Math.floor(Math.random()*9e5+1e5)}</b></p></div>`)}
+['s','pr','o'].forEach(i=>$('#'+i).oninput=draw);draw();
+document.querySelectorAll('[data-n]').forEach(e=>{let n=0,t=+e.dataset.n,i=setInterval(()=>{n++;e.textContent=n.toLocaleString('fa-IR');if(n>=t)clearInterval(i)},60)});
+</script></body></html>

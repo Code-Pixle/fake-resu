@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#18251e" />
+  <meta name="description" content="منوی کافه‌رستوران رُستا؛ قهوه تازه، برگر دست‌ساز، پیتزای تنوری و لحظه‌های خوشمزه." />
+  <meta name="color-scheme" content="light" />
+  <title>رُستا | کافه‌رستوران</title>
+  
+  <link rel="stylesheet" href="../../fonts/local-fonts.css">
+<style>
+    :root {
+      --ink: #18251e;
+      --ink-soft: #29382f;
+      --cream: #f7f4ec;
+      --paper: #fffdf8;
+      --muted: #777b70;
+      --line: #e9e4d9;
+      --accent: #d9794d;
+      --accent-dark: #bd6039;
+      --sage: #dce4d8;
+      --radius: 22px;
+      --shadow: 0 18px 50px rgba(24, 37, 30, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Vazirmatn", sans-serif;
+      line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(1160px, calc(100% - 44px)); margin-inline: auto; }
+    .topbar {
+      background: var(--ink);
+      color: rgba(255,255,255,.78);
+      font-size: 12px;
+      padding: 7px 0;
+    }
+    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .topbar strong { color: #f0c8a9; font-weight: 600; }
+    .topbar-note { display: flex; align-items: center; gap: 8px; }
+    .topbar-note::before { content: ""; width: 6px; height: 6px; background: #8bb28d; border-radius: 50%; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(247,244,236,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(24,37,30,.07);
+    }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .brand { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .brand-mark {
+      width: 43px; height: 43px; border-radius: 15px; display: grid; place-items: center;
+      background: var(--ink); color: #f5e9d7; font-size: 23px; font-weight: 800;
+      transform: rotate(-5deg);
+    }
+    .brand-name { font-size: 22px; font-weight: 800; line-height: 1.15; letter-spacing: -.7px; }
+    .brand-sub { display: block; color: var(--muted); font: 10px Arial, Tahoma, sans-serif; letter-spacing: 2.4px; direction: ltr; margin-top: 3px; }
+    .nav-links { display: flex; gap: 30px; align-items: center; color: #5f665e; font-size: 13px; }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: var(--accent-dark); }
+    .nav-action {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      background: var(--accent); color: white; border: 0; padding: 11px 19px;
+      border-radius: 999px; font-size: 12px; font-weight: 700; transition: .2s;
+    }
+    .nav-action:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .mobile-toggle { display: none; background: none; border: 0; color: var(--ink); font-size: 25px; cursor: pointer; }
+
+    .hero { padding: 35px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; min-height: 485px; gap: 52px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--accent-dark); font-size: 12px; font-weight: 700; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: var(--accent); }
+    h1 { font-size: clamp(42px, 5.2vw, 68px); line-height: 1.25; letter-spacing: -2.5px; margin: 19px 0 18px; font-weight: 800; }
+    h1 span { color: var(--accent); position: relative; white-space: nowrap; }
+    .hero-copy { max-width: 490px; color: #697168; font-size: 15px; line-height: 2.2; margin: 0 0 27px; }
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary, .btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 22px; border-radius: 12px; font-size: 13px; font-weight: 700; transition: .2s; }
+    .btn-primary { color: white; background: var(--ink); box-shadow: 0 10px 20px rgba(24,37,30,.13); }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .btn-secondary { color: var(--ink); border: 1px solid #dcd7cb; background: rgba(255,255,255,.35); }
+    .btn-secondary:hover { background: white; }
+    .hero-meta { display: flex; align-items: center; gap: 22px; margin-top: 36px; }
+    .meta-item { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 11px; }
+    .meta-icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 11px; background: #e9ece3; font-size: 16px; }
+    .hero-visual { height: 455px; position: relative; }
+    .hero-main-img { position: absolute; inset: 0 40px 25px 0; border-radius: 34px 110px 34px 34px; overflow: hidden; box-shadow: var(--shadow); }
+    .hero-main-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-main-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(12,22,16,.3)); }
+    .floating-card { position: absolute; bottom: 0; right: 0; display: flex; gap: 12px; align-items: center; background: var(--paper); border: 1px solid rgba(24,37,30,.07); border-radius: 18px; padding: 13px 17px; box-shadow: var(--shadow); }
+    .floating-icon { width: 41px; height: 41px; display: grid; place-items: center; border-radius: 13px; background: #f5e6d8; font-size: 20px; }
+    .floating-card b { display: block; font-size: 13px; }
+    .floating-card small { display: block; color: var(--muted); font-size: 10px; }
+    .hero-stamp { position: absolute; top: 23px; left: 6px; width: 91px; height: 91px; background: var(--accent); color: white; border: 5px solid var(--cream); border-radius: 50%; display: grid; place-content: center; text-align: center; transform: rotate(-12deg); line-height: 1.35; }
+    .hero-stamp b { font-size: 19px; }
+    .hero-stamp small { font-size: 9px; }
+
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 26px; }
+    .section-kicker { color: var(--accent-dark); font-size: 11px; font-weight: 800; letter-spacing: .5px; }
+    h2 { margin: 4px 0 0; font-size: clamp(26px, 3vw, 37px); line-height: 1.4; letter-spacing: -.8px; }
+    .section-desc { margin: 0; color: var(--muted); font-size: 12px; max-width: 330px; }
+    .menu-section { padding: 55px 0 84px; background: var(--paper); border-radius: 42px 42px 0 0; }
+    .category-row { display: flex; gap: 9px; overflow-x: auto; padding: 3px 1px 18px; scrollbar-width: none; }
+    .category-row::-webkit-scrollbar { display: none; }
+    .category-btn { border: 1px solid var(--line); color: #70766e; background: transparent; border-radius: 999px; padding: 9px 17px; white-space: nowrap; cursor: pointer; font-size: 12px; transition: .2s; }
+    .category-btn:hover, .category-btn.active { color: white; background: var(--ink); border-color: var(--ink); }
+    .menu-toolbar { display: flex; align-items: center; justify-content: space-between; margin: 7px 0 22px; }
+    .menu-toolbar span { color: var(--muted); font-size: 11px; }
+    .menu-toolbar strong { color: var(--ink); font-size: 12px; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .product-card { min-width: 0; background: white; border: 1px solid #eeeae1; border-radius: 18px; overflow: hidden; transition: transform .25s, box-shadow .25s; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 16px 36px rgba(24,37,30,.09); }
+    .product-image { height: 205px; position: relative; overflow: hidden; background: #eee9df; }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
+    .product-card:hover .product-image img { transform: scale(1.05); }
+    .product-tag { position: absolute; top: 12px; right: 12px; border-radius: 999px; padding: 5px 10px; background: rgba(255,253,248,.93); color: var(--ink); font-size: 10px; font-weight: 700; backdrop-filter: blur(5px); }
+    .product-info { padding: 15px 16px 16px; }
+    .product-title-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .product-title { margin: 0; font-size: 16px; font-weight: 800; }
+    .product-rating { color: #b47b36; font: 11px Arial, Tahoma, sans-serif; white-space: nowrap; }
+    .product-desc { min-height: 46px; margin: 7px 0 13px; color: #85877f; font-size: 11px; line-height: 1.9; }
+    .product-bottom { border-top: 1px solid #f0ede7; padding-top: 12px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .price { font-weight: 800; font-size: 15px; white-space: nowrap; }
+    .price small { color: #9b9c94; font-size: 9px; font-weight: 500; margin-right: 3px; }
+    .add-btn { width: 34px; height: 34px; display: grid; place-items: center; border: 0; border-radius: 11px; background: #edf1e9; color: var(--ink); font-size: 20px; cursor: pointer; transition: .2s; }
+    .add-btn:hover { background: var(--accent); color: white; }
+    .empty-state { display: none; grid-column: 1/-1; text-align: center; padding: 45px; color: var(--muted); }
+
+    .story { padding: 83px 0; background: var(--sage); }
+    .story-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 65px; align-items: center; }
+    .story-photos { position: relative; height: 365px; }
+    .story-photo-main { position: absolute; inset: 0 0 30px 75px; border-radius: 25px 25px 100px 25px; overflow: hidden; }
+    .story-photo-main img, .story-photo-small img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .story-photo-small { position: absolute; width: 165px; height: 165px; bottom: 0; left: 0; border: 8px solid var(--sage); border-radius: 50%; overflow: hidden; }
+    .story-text p { color: #667269; font-size: 13px; line-height: 2.3; margin: 18px 0 22px; }
+    .story-points { display: flex; gap: 25px; flex-wrap: wrap; }
+    .story-point b { display: block; font-size: 23px; color: var(--ink); }
+    .story-point span { color: #788178; font-size: 10px; }
+
+    .visit { padding: 75px 0; background: var(--ink); color: white; }
+    .visit-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; }
+    .visit-intro { grid-column: 1/-1; display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 10px; }
+    .visit h2 { color: white; }
+    .visit .section-kicker { color: #e6a47f; }
+    .visit-intro p { max-width: 340px; margin: 0; color: #a8b1a9; font-size: 12px; }
+    .visit-card { border: 1px solid rgba(255,255,255,.12); border-radius: 17px; padding: 20px; background: rgba(255,255,255,.035); }
+    .visit-card .icon { font-size: 20px; margin-bottom: 9px; }
+    .visit-card b { display: block; font-size: 13px; margin-bottom: 5px; }
+    .visit-card span { color: #aeb7ae; font-size: 11px; }
+    footer { background: #111b15; color: #a7afa7; padding: 23px 0; font-size: 10px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-brand { color: white; font-size: 14px; font-weight: 800; }
+    .socials { display: flex; gap: 14px; }
+    .socials a:hover { color: #e6a47f; }
+    .toast { position: fixed; bottom: 22px; right: 50%; transform: translate(50%, 20px); opacity: 0; pointer-events: none; z-index: 50; background: var(--ink); color: white; border-radius: 12px; padding: 11px 18px; font-size: 12px; box-shadow: var(--shadow); transition: .25s; }
+    .toast.show { opacity: 1; transform: translate(50%, 0); }
+
+    @media (max-width: 900px) {
+      .hero-grid { gap: 28px; }
+      .hero-visual { height: 390px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .story-grid { gap: 35px; }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 30px, 520px); }
+      .topbar-inner { justify-content: center; }
+      .topbar-note { display: none; }
+      .nav { min-height: 68px; }
+      .mobile-toggle { display: block; }
+      .nav-action { padding: 9px 13px; font-size: 11px; }
+      .nav-links { display: none; position: absolute; top: 68px; right: 15px; left: 15px; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 17px; background: var(--paper); border: 1px solid var(--line); border-radius: 15px; box-shadow: var(--shadow); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 10px 0; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border: 0; }
+      .hero { padding: 24px 0 49px; }
+      .hero-grid { display: flex; flex-direction: column; align-items: stretch; gap: 30px; }
+      .hero-copy { font-size: 13px; }
+      .hero-visual { height: 330px; }
+      .hero-main-img { inset: 0 20px 20px 0; border-radius: 27px 75px 27px 27px; }
+      .hero-stamp { width: 76px; height: 76px; left: 0; top: 13px; }
+      .hero-meta { gap: 14px; margin-top: 25px; flex-wrap: wrap; }
+      .meta-item { font-size: 10px; }
+      .menu-section { padding: 45px 0 60px; border-radius: 28px 28px 0 0; }
+      .section-head { align-items: start; flex-direction: column; gap: 8px; }
+      .section-desc { max-width: none; }
+      .product-grid { gap: 12px; }
+      .product-image { height: 145px; }
+      .product-info { padding: 11px; }
+      .product-title { font-size: 13px; }
+      .product-rating { font-size: 9px; }
+      .product-desc { font-size: 10px; min-height: 57px; margin: 6px 0 10px; }
+      .price { font-size: 12px; }
+      .price small { font-size: 8px; }
+      .add-btn { width: 30px; height: 30px; }
+      .story { padding: 55px 0; }
+      .story-grid { display: flex; flex-direction: column; gap: 32px; }
+      .story-photos { width: 100%; height: 285px; }
+      .story-photo-main { inset: 0 0 22px 55px; }
+      .story-photo-small { width: 125px; height: 125px; border-width: 6px; }
+      .story-text p { font-size: 12px; }
+      .visit { padding: 55px 0; }
+      .visit-intro { display: block; }
+      .visit-intro p { margin-top: 10px; }
+      .visit-grid { grid-template-columns: 1fr; gap: 11px; }
+      .visit-intro { grid-column: auto; }
+      .visit-card { padding: 15px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 380px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .product-image { height: 190px; }
+      .product-desc { min-height: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-note">هر روز، تازه و با عشق آماده می‌کنیم</span>
+      <span>برای یک استراحت خوشمزه، همین‌جا منتظرتیم <strong>✦</strong></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="رستا، صفحه اصلی">
+        <span class="brand-mark">ر</span>
+        <span><span class="brand-name">رُستا</span><span class="brand-sub">CAFE & RESTAURANT</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">صفحه اصلی</a>
+        <a href="#menu">منوی ما</a>
+        <a href="#story">داستان رستا</a>
+        <a href="#visit">راه‌های ارتباطی</a>
+      </nav>
+      <a class="nav-action" href="#menu">دیدن منو <span>←</span></a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="باز کردن منو">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">یه گوشه دنج برای حال خوب</span>
+          <h1>طعم خوبِ<br><span>لحظه‌های ساده</span></h1>
+          <p class="hero-copy">از عطر قهوه‌ای که تازه آسیاب شده تا غذایی که با حوصله آماده می‌شه؛ رستا جاییه برای مکث کردن، گپ زدن و ساختن خاطره‌های خوشمزه.</p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn-primary">منوی رستا <span>←</span></a>
+            <a href="#story" class="btn-secondary">بیشتر درباره ما</a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-item"><span class="meta-icon">☕</span><span>قهوه تازه‌دم</span></div>
+            <div class="meta-item"><span class="meta-icon">✦</span><span>مواد اولیه تازه</span></div>
+            <div class="meta-item"><span class="meta-icon">♡</span><span>فضای گرم و صمیمی</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-main-img">
+            <img referrerpolicy="no-referrer" decoding="async" src="images/rosta-cafe-01-873eb4f6.avif" alt="قهوه تازه روی میز کافه" />
+          </div>
+          <div class="hero-stamp"><b>Roستا</b><small>GOOD FOOD<br>GOOD MOOD</small></div>
+          <div class="floating-card"><span class="floating-icon">✧</span><span><b>هر روز تازه‌تر</b><small>با انتخاب مواد اولیه باکیفیت</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="section-kicker">A LITTLE BIT OF EVERYTHING</span><h2>منوی خوشمزه‌ی رستا</h2></div>
+          <p class="section-desc">از اولین جرعه قهوه تا آخرین لقمه دسر؛ انتخاب با توئه.</p>
+        </div>
+        <div class="category-row" id="categoryRow" aria-label="دسته‌بندی منو">
+          <button class="category-btn active" data-filter="all">همه آیتم‌ها</button>
+          <button class="category-btn" data-filter="hot">قهوه گرم</button>
+          <button class="category-btn" data-filter="cold">نوشیدنی سرد</button>
+          <button class="category-btn" data-filter="burger">برگر</button>
+          <button class="category-btn" data-filter="pizza">پیتزا</button>
+          <button class="category-btn" data-filter="pasta">پاستا</button>
+          <button class="category-btn" data-filter="starter">پیش‌غذا و دسر</button>
+        </div>
+        <div class="menu-toolbar"><strong>پیشنهادهای رستا</strong><span id="resultCount">۱۲ انتخاب خوشمزه</span></div>
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="hot">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-02-6d5e34a9.avif" alt="اسپرسو دبل"/><span class="product-tag">پرفروش</span></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">اسپرسو دبل</h3><span class="product-rating">★ 4.9</span></div><p class="product-desc">دو شات قهوه تازه‌ آسیاب‌شده با کرمای غلیظ و عطر ماندگار.</p><div class="product-bottom"><span class="price">۱۹۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات اسپرسو دبل">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="hot">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-03-ce78cfbf.avif" alt="کاپوچینو"/><span class="product-tag">انتخاب محبوب</span></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">کاپوچینو</h3><span class="product-rating">★ 4.8</span></div><p class="product-desc">اسپرسو دبل، شیر بخارداده‌شده و فوم لطیف با پودر کاکائو.</p><div class="product-bottom"><span class="price">۲۲۵,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات کاپوچینو">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="hot">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-04-3899a01f.avif" alt="لاته"/></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">کافه لاته</h3><span class="product-rating">★ 4.8</span></div><p class="product-desc">اسپرسوی غلیظ در ترکیب با شیر گرم و لایه‌ای از فوم نرم.</p><div class="product-bottom"><span class="price">۲۲۵,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات کافه لاته">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="cold">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-05-5e65327a.avif" alt="آیس آمریکانو"/><span class="product-tag">خنک و دلچسب</span></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">آیس آمریکانو</h3><span class="product-rating">★ 4.7</span></div><p class="product-desc">دبل اسپرسو، آب خنک و یخ؛ ساده، خوش‌عطر و باطراوت.</p><div class="product-bottom"><span class="price">۱۶۵,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات آیس آمریکانو">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="cold">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-06-34f4de56.avif" alt="آیس لاته"/></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">آیس لاته</h3><span class="product-rating">★ 4.8</span></div><p class="product-desc">اسپرسو، شیر سرد و یخ؛ نوشیدنی خنک با طعم متعادل قهوه.</p><div class="product-bottom"><span class="price">۲۱۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات آیس لاته">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="burger">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-07-d6a425d0.avif" alt="کلاسیک برگر"/><span class="product-tag">پیشنهاد سرآشپز</span></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">کلاسیک برگر</h3><span class="product-rating">★ 4.9</span></div><p class="product-desc">گوشت گریل‌شده، پنیر چدار، کاهو، گوجه و سس مخصوص در نان بریوش.</p><div class="product-bottom"><span class="price">۶۷۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات کلاسیک برگر">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="burger">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/images.jpeg" alt="ماشروم برگر"/></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">ماشروم برگر</h3><span class="product-rating">★ 4.8</span></div><p class="product-desc">برگر گوشت، قارچ تفت‌داده، پنیر، پیاز کاراملی و سس خامه‌ای.</p><div class="product-bottom"><span class="price">۶۶۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات ماشروم برگر">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="pizza">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-09-89ddf316.avif" alt="پیتزا پپرونی"/><span class="product-tag">تنوری</span></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">پیتزا پپرونی</h3><span class="product-rating">★ 4.9</span></div><p class="product-desc">خمیر دست‌ساز، سس گوجه، پنیر موزارلا و پپرونی تند و خوش‌عطر.</p><div class="product-bottom"><span class="price">۱,۰۶۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات پیتزا پپرونی">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="pizza">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-10-576f12f2.avif" alt="پیتزا مرغ و قارچ"/></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">پیتزا مرغ و قارچ</h3><span class="product-rating">★ 4.7</span></div><p class="product-desc">مرغ مزه‌دارشده، قارچ تازه، پنیر موزارلا و سس مخصوص.</p><div class="product-bottom"><span class="price">۱,۰۷۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات پیتزا مرغ و قارچ">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="pasta">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-11-c86903e7.avif" alt="پاستا چیکن آلفردو"/><span class="product-tag">محبوب</span></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">پاستا چیکن آلفردو</h3><span class="product-rating">★ 4.9</span></div><p class="product-desc">پنه، مرغ گریل‌شده، قارچ، خامه و پنیر پارمزان.</p><div class="product-bottom"><span class="price">۷۴۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات پاستا چیکن آلفردو">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="starter">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-12-05021977.avif" alt="کیک شکلاتی"/></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">کیک شکلاتی</h3><span class="product-rating">★ 4.8</span></div><p class="product-desc">کیک شکلاتی نرم با گاناش شکلات تلخ و بافتی مرطوب و لطیف.</p><div class="product-bottom"><span class="price">۲۶۵,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات کیک شکلاتی">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="starter">
+            <div class="product-image"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-13-977c739c.avif" alt="قارچ سوخاری"/><span class="product-tag">برای شروع</span></div>
+            <div class="product-info"><div class="product-title-row"><h3 class="product-title">قارچ سوخاری</h3><span class="product-rating">★ 4.7</span></div><p class="product-desc">قارچ تازه با روکش سوخاری ترد، همراه با سس سیر مخصوص.</p><div class="product-bottom"><span class="price">۳۵۰,۰۰۰ <small>تومان</small></span><button class="add-btn" aria-label="اطلاعات قارچ سوخاری">+</button></div></div>
+          </article>
+        </div>
+        <div class="empty-state" id="emptyState">برای این دسته هنوز آیتمی ثبت نشده.</div>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="container story-grid">
+        <div class="story-photos">
+          <div class="story-photo-main"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-14-81ddad49.avif" alt="فضای گرم و صمیمی کافه"/></div>
+          <div class="story-photo-small"><img referrerpolicy="no-referrer" decoding="async" loading="lazy" src="images/rosta-cafe-15-21389b8a.avif" alt="جزئیات فضای کافه"/></div>
+        </div>
+        <div class="story-text">
+          <span class="section-kicker">OUR LITTLE STORY</span>
+          <h2>اینجا قراره<br>وقت، کمی آروم‌تر بگذره.</h2>
+          <p>رستا از یک فکر ساده شروع شد: ساختن جایی که آدم‌ها بتونن از شلوغی روز فاصله بگیرن. ما به قهوه خوب، غذای تازه و جزئیات کوچیکی که یک روز معمولی رو قشنگ‌تر می‌کنن اهمیت می‌دیم.</p>
+          <div class="story-points">
+            <div class="story-point"><b>۱۰۰٪</b><span>تازه و روزانه</span></div>
+            <div class="story-point"><b>با عشق</b><span>از آشپزخونه تا میز تو</span></div>
+            <div class="story-point"><b>هر روز</b><span>برای یک حال خوب تازه</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-intro"><div><span class="section-kicker">COME SAY HELLO</span><h2>یه میز برای تو خالیه.</h2></div><p>برای یک قهوه کوتاه، یک قرار دوستانه یا یک وعده خوشمزه، به رستا سر بزن.</p></div>
+        <div class="visit-card"><div class="icon">⌖</div><b>نشانی</b><span>تهران، محدوده خیابان ولیعصر<br>نشانی نمایشی برای نسخه دمو</span></div>
+        <div class="visit-card"><div class="icon">◷</div><b>ساعت کاری</b><span>هر روز از ۸ صبح تا ۱۱ شب<br>جمعه‌ها از ۹ صبح تا ۱۱ شب</span></div>
+        <div class="visit-card"><div class="icon">☎</div><b>ارتباط با ما</b><span>برای رزرو و سفارش حضوری<br>با مجموعه تماس بگیرید.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-brand">رُستا · CAFE & RESTAURANT</span>
+      <span>© ۲۰۲۶ رستا. تمامی حقوق محفوظ است.</span>
+      <div class="socials"><a href="#home">اینستاگرام</a><a href="#home">منوی روز</a><a href="#home">بازگشت به بالا ↑</a></div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status">این نسخه نمایشی منو است؛ سفارش آنلاین فعال نیست.</div>
+
+  <script>
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const cards = document.querySelectorAll('.product-card');
+    const resultCount = document.getElementById('resultCount');
+    const emptyState = document.getElementById('emptyState');
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        categoryButtons.forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.dataset.filter;
+        let visible = 0;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        resultCount.textContent = `${visible} آیتم در این دسته`;
+        emptyState.style.display = visible ? 'none' : 'block';
+      });
+    });
+
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    document.querySelectorAll('.add-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
